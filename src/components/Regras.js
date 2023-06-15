@@ -24,7 +24,7 @@ const RegrasComponent = () => {
     <div className="text-start text-light mb-5"><h1 >Regras do jogo</h1></div>
       <div className="row">
       {regrasData.map((regra) => (
-        <div className="col-lg-1 col-md-2 col-sm-6 col-xs-12 mb-5" key={regra.id}>
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-5" key={regra.id}>
           <div className="card "> 
             <div className="card-body text-bg-secondary">
               <h4 className="card-title">{regra.regra}</h4>
