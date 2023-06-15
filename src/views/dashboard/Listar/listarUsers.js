@@ -74,10 +74,13 @@ export default function ListarUsers() {
 
   return (
     <div className="containerLU m-5">
-      <div className="d-flex justify-content-start">
+            <div className="d-flex justify-content-between">
+        <div className='dashboardTitulos'><h2>administradores</h2></div>
+        <div>
       <Link to="/dashboard/criar-users" className="btn btn-light" tabIndex="1" role="button">
           Criar novo administrador
         </Link>
+      </div>
       </div>
       <table className="table table-responsive table-striped table-dark text-bg-secondary my-5">
         <thead className="thead-dark text-bg-dark ">

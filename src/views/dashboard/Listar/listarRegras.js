@@ -71,10 +71,13 @@ export default function ListarRegras() {
 
   return (
     <div className="containerLR m-5">
-      <div className="d-flex justify-content-start">
+      <div className="d-flex justify-content-between">
+      <div className='dashboardTitulos'><h2>Regras</h2></div>
+        <div>
         <Link to="/dashboard/criar-regras" className="btn btn-light" tabIndex="1" role="button">
           Inserir nova regra
         </Link>
+      </div>
       </div>
       <table className="table table-responsive table-striped table-dark text-bg-secondary my-5">
         <thead className="thead-dark text-bg-dark ">
