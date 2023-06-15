@@ -78,9 +78,9 @@ export default function ListarEquipas() {
       <div className="d-flex justify-content-between">
         <div className='dashboardTitulos'><h2>Equipas</h2></div>
         <div>
-        <a href="/dashboard/criar-equipas" className="btn btn-light" tabIndex="1" role="button">
+        <Link to="/dashboard/criar-equipas" className="btn btn-light" tabIndex="1" role="button">
           Inserir nova equipa
-        </a>
+        </Link>
         </div>
       </div>
       <table className="table table-responsive table-striped table-dark text-bg-secondary my-5">

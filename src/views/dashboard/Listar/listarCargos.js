@@ -71,9 +71,9 @@ export default function ListarCargos() {
   return (
     <div className="containerLC m-5">
       <div className="d-flex justify-content-start">
-        <a href="/dashboard/criar-cargos" className="btn btn-light" tabIndex="1" role="button">
+      <Link to="/dashboard/criar-cargos" className="btn btn-light" tabIndex="1" role="button">
           Criar novo cargo
-        </a>
+      </Link>
       </div>
       <table className="table table-responsive table-striped table-dark text-bg-secondary my-5">
         <thead className="thead-dark text-bg-dark ">
