@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; 
 import Cliente from './views/cliente/index'
 import Dashboard from './views/dashboard/index'
+import NotFoundPage from './views/404/index'; 
 import AuthService from "./auth-service"; 
 
 function App() {
@@ -47,6 +48,7 @@ function AppContent() {
         <Route path="/login" element={<Cliente.Login />} />
         <Route path="/termos" element={<Cliente.Termos />} />
         <Route path="/dashboard/*" element={<Dashboard.Home />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
