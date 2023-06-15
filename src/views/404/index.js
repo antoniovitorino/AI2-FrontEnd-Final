@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
   useEffect(() => {
@@ -10,9 +13,21 @@ const NotFoundPage = () => {
   return (
     <>
       <Navbar />
-      <div>
-        <h1>404 - Página não encontrada</h1>
-        <p>A página que procura não existe.</p>
+      <div className="d-flex align-items-center justify-content-center vh-100">
+        <div className="text-center row">
+          <div className="col-md-6">
+            <img src="/imagens/404.png" alt="404" className="img-fluid" />
+          </div>
+          <div className="col-md-6 mt-5">
+            <p className="fs-3">
+              <span className="text-danger">Opps!</span> Página não encontrada
+            </p>
+            <p className="lead">A página que procura não existe.</p>
+            <Link to="/" className="btn btn-primary">
+              Início
+            </Link>
+          </div>
+        </div>
       </div>
       <Footer />
     </>
