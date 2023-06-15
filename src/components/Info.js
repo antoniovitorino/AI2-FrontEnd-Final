@@ -12,7 +12,7 @@ const Info = () => {
   useEffect(() => {
     const fetchPaginas = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/paginas/1');
+        const response = await axios.get('https://jogatanas-api.onrender.com/paginas/1');
         const data = response.data.data;
         setPaginas(shuffle(data));
       } catch (error) {

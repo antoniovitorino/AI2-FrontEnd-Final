@@ -7,7 +7,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import authHeader from '../../../auth-header';
 
-const baseUrl = "http://localhost:4000/users";
+const baseUrl = "https://jogatanas-api.onrender.com/users";
 
 export default function ListarUsers() {
   const [dataUser, setdataUser] = useState([]);

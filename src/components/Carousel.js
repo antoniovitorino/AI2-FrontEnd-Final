@@ -8,7 +8,7 @@ const Carousel = () => {
   useEffect(() => {
     const fetchCarouselData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/carousels");
+        const response = await axios.get("https://jogatanas-api.onrender.com/carousels");
         const data = response.data.data;
         setCarouselData(shuffle(data));
       } catch (error) {
@@ -29,7 +29,7 @@ const Carousel = () => {
           >
             {item.fotoId && (
               <img
-                src={`http://localhost:4000/midia/${item.fotoId}`}
+                src={`https://jogatanas-api.onrender.com/midia/${item.fotoId}`}
                 className="d-block w-100"
                 alt={item.titulo}
               />

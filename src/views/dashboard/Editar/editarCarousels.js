@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
-const baseUrl = "http://localhost:4000";
+const baseUrl = "https://jogatanas-api.onrender.com";
 
 export default function EditarCarousels() {
   const navigate = useNavigate();

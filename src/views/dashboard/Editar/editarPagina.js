@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import React, { useEffect, useState } from "react";
 
-const baseUrl = "http://localhost:4000/paginas";
+const baseUrl = "https://jogatanas-api.onrender.com/paginas";
 
 export default function EditarPaginas() {
   const [dataPagina, setdataPagina] = useState("");

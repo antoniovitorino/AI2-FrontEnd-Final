@@ -9,7 +9,7 @@ const Equipas = () => {
   useEffect(() => {
     const fetchEquipas = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/equipas');
+        const response = await axios.get('https://jogatanas-api.onrender.com/equipas');
         const data = response.data.data;
         setEquipas(shuffle(data));
       } catch (error) {
@@ -27,7 +27,7 @@ const Equipas = () => {
           {equipas.slice(0, 12).map(equipa => (
           <div className="col-lg-2 col-md-12 mb-5" key={equipa.id}>
             <div className="card ">
-              <img className="card-img-top" src={`http://localhost:4000/midia/${equipa.fotoId}`} alt={equipa.nome} />  
+              <img className="card-img-top" src={`https://jogatanas-api.onrender.com/midia/${equipa.fotoId}`} alt={equipa.nome} />  
               <div className="card-body text-bg-dark">
                 <h5 className="card-title">{equipa.nome}</h5>
                 <p>Aluno n.º {equipa.numero_aluno}</p>

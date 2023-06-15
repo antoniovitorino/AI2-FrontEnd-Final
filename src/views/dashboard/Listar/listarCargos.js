@@ -15,7 +15,7 @@ export default function ListarCargos() {
   }, []);
 
   function LoadCargo() {
-    const url = 'http://localhost:4000/cargos';
+    const url = 'https://jogatanas-api.onrender.com/cargos';
     axios.get(url).then(res => {
         if (res.data.success) {
           const data = res.data.data;
@@ -52,7 +52,7 @@ export default function ListarCargos() {
   };
 
   const SendDelete = cargoId => {
-    const baseUrl = 'http://localhost:4000/cargos/delete';
+    const baseUrl = 'https://jogatanas-api.onrender.com/cargos/delete';
     axios.post(baseUrl, {
         id: cargoId
       })

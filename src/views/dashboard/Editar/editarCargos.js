@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const baseUrl = "http://localhost:4000/cargos";
+const baseUrl = "https://jogatanas-api.onrender.com/cargos";
 
 export default function EditarCargos() {
   const navigate = useNavigate();

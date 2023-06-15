@@ -27,7 +27,7 @@ export default function CriarUsers() {
       setMessage("A senha deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, letras minúsculas e números!");
       setAlertType("danger");
     } else {
-      const baseUrl = "http://localhost:4000/users/register";
+      const baseUrl = "https://jogatanas-api.onrender.com/users/register";
 
       axios
         .post(baseUrl, {

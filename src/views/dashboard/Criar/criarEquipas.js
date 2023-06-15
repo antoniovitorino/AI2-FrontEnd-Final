@@ -17,7 +17,7 @@ export default function CriarEquipas() {
   const [alertType, setAlertType] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:4000/cargos")
+    axios.get("https://jogatanas-api.onrender.com/cargos")
       .then(response => {
         if (response.data.success) {
           setCargos(response.data.data);
@@ -59,7 +59,7 @@ export default function CriarEquipas() {
       setMessage("Selecionar uma imagem!");
       setAlertType("danger");
     } else {
-      const baseUrl = "http://localhost:4000/equipas/create";
+      const baseUrl = "https://jogatanas-api.onrender.com/equipas/create";
       const formData = new FormData();
       formData.append("nome", campNome);
       formData.append("numero_aluno", campNumAluno);

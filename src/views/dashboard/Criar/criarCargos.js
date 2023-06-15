@@ -12,7 +12,7 @@ export default function CriarCargos() {
   const [alertType, setAlertType] = useState('');
 
   const SendSave = () => {
-    const baseUrl = 'http://localhost:4000/cargos/create';
+    const baseUrl = 'https://jogatanas-api.onrender.com/cargos/create';
 
     axios
       .post(baseUrl, { cargo: campCargo })

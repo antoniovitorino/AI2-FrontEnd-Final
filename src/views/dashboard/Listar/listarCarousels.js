@@ -15,7 +15,7 @@ export default function ListarCarousels(){
         LoadCarousel(); },[]);  
      
         function LoadCarousel() {
-            const url = "http://localhost:4000/carousels"; 
+            const url = "https://jogatanas-api.onrender.com/carousels"; 
             axios.get(url) 
             .then(res => {
                 if(res.data.success){
@@ -52,7 +52,7 @@ export default function ListarCarousels(){
         }
    
         const SendDelete = (carouselId) => { 
-            const baseUrl = "http://localhost:4000/carousels/delete" 
+            const baseUrl = "https://jogatanas-api.onrender.com/carousels/delete" 
                 axios.post(baseUrl,{
                     headers: authHeader(),
                     id:carouselId 
@@ -105,7 +105,7 @@ export default function ListarCarousels(){
         return dataCarousel.map((data, index)=>{ 
             return(
                 <tr key={index} className="align-middle"> 
-                    <td style={{ width: '20%' }}><img className="imagemCarousel" src={`http://localhost:4000/midia/${data.fotoId}`} alt={data.titulo} /></td>
+                    <td style={{ width: '20%' }}><img className="imagemCarousel" src={`https://jogatanas-api.onrender.com/midia/${data.fotoId}`} alt={data.titulo} /></td>
                     <td style={{ width: '20%' }}>{data.titulo}</td>
                     <td style={{ width: '50%' }}>{data.descricao}</td> 
                     <td className="text-end" style={{ width: '5%' }}>

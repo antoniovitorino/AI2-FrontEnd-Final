@@ -14,7 +14,7 @@ export default function CriarCarousels() {
   const [alertType, setAlertType] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:4000/carousels")
+    axios.get("https://jogatanas-api.onrender.com/carousels")
       .then(response => {
         if (response.data.success) {
           
@@ -50,7 +50,7 @@ export default function CriarCarousels() {
       setMessage("Selecionar uma imagem!");
       setAlertType("danger");
     } else {
-      const baseUrl = "http://localhost:4000/carousels/create";
+      const baseUrl = "https://jogatanas-api.onrender.com/carousels/create";
       const formData = new FormData();
       formData.append("titulo", campTitulo);
       formData.append("descricao", campDescricao);

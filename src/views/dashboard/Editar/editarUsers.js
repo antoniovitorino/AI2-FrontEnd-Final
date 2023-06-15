@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import authHeader from '../../../auth-header';
 
-const baseUrl = "http://localhost:4000/users";
+const baseUrl = "https://jogatanas-api.onrender.com/users";
 
 export default function EditarUsers() {
   const navigate = useNavigate();

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 
-const baseUrl = "http://localhost:4000/regras";
+const baseUrl = "https://jogatanas-api.onrender.com/regras";
 
 export default function EditarRegras() {
   const navigate = useNavigate();

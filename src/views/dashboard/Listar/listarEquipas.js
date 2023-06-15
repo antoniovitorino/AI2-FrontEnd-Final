@@ -16,7 +16,7 @@ export default function ListarEquipas() {
   }, []);
 
   function LoadEquipa() {
-    const url = "http://localhost:4000/equipas";
+    const url = "https://jogatanas-api.onrender.com/equipas";
     axios.get(url)
       .then(res => {
         if (res.data.success) {
@@ -54,7 +54,7 @@ export default function ListarEquipas() {
   }
 
   const SendDelete = (userId) => {
-    const baseUrl = "http://localhost:4000/equipas/delete"
+    const baseUrl = "https://jogatanas-api.onrender.com/equipas/delete"
     axios.post(baseUrl, {
       headers: authHeader(),
       id: userId
@@ -113,7 +113,7 @@ export default function ListarEquipas() {
     return dataEquipa.map((data, index) => {
       return (
         <tr key={index} className="align-middle">
-          <td style={{ width: '10%' }}><img className="imagemEquipa" src={`http://localhost:4000/midia/${data.fotoId}`} alt={data.nome} /></td>
+          <td style={{ width: '10%' }}><img className="imagemEquipa" src={`https://jogatanas-api.onrender.com/midia/${data.fotoId}`} alt={data.nome} /></td>
           <td style={{ width: '20%' }}>{data.nome}</td>
           <td style={{ width: '10%' }}>{data.numero_aluno}</td>
           <td style={{ width: '15%' }}>{data.cargo.cargo}</td>

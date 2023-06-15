@@ -7,7 +7,7 @@ const RegrasComponent = () => {
   useEffect(() => {
     const fetchRegrasData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/regras');
+        const response = await axios.get('https://jogatanas-api.onrender.com/regras');
         const data = response.data.data;
         setRegrasData(data);
       } catch (error) {

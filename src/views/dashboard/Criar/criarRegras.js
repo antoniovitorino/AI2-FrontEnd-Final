@@ -14,7 +14,7 @@ export default function CriarRegras() {
   const [alertType, setAlertType] = useState('');
 
   const SendSave = () => {
-    const baseUrl = 'http://localhost:4000/regras/create';
+    const baseUrl = 'https://jogatanas-api.onrender.com/regras/create';
 
     axios
       .post(baseUrl, { 

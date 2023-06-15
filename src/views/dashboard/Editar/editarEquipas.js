@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
-const baseUrl = "http://localhost:4000";
+const baseUrl = "https://jogatanas-api.onrender.com";
 
 export default function EditarEquipas() {
   const navigate = useNavigate();
@@ -184,7 +184,7 @@ export default function EditarEquipas() {
         <div className="col-md-2">
           <div className="form-group">
             <label htmlFor="inputFoto" className="visually-hidden">Foto atual</label>
-            {dataEquipa.fotoId && <img src={`http://localhost:4000/midia/${dataEquipa.fotoId}`} className="rounded" alt="foto atual" style={{ width: '300px', height: 'auto' }} />}
+            {dataEquipa.fotoId && <img src={`https://jogatanas-api.onrender.com/midia/${dataEquipa.fotoId}`} className="rounded" alt="foto atual" style={{ width: '300px', height: 'auto' }} />}
           </div>
         </div>
       </div>

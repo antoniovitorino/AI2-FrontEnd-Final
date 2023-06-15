@@ -17,7 +17,7 @@ export default function ListarRegras() {
   }, []);
 
   function LoadRegra() {
-    const url = 'http://localhost:4000/regras';
+    const url = 'https://jogatanas-api.onrender.com/regras';
     axios.get(url).then(res => {
         if (res.data.success) {
           const data = res.data.data;
@@ -53,7 +53,7 @@ export default function ListarRegras() {
   };
 
   const SendDelete = regraId => {
-    const baseUrl = 'http://localhost:4000/regras/delete';
+    const baseUrl = 'https://jogatanas-api.onrender.com/regras/delete';
     axios.post(baseUrl, {
         id: regraId
       })
