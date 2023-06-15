@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./css/style.css";
+import "../assets/style.css";
 import LogoutIcon from '@mui/icons-material/Logout';
 import AuthService from '../auth-service'; 
 import { useNavigate } from "react-router-dom";

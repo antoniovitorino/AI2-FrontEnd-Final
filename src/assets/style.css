@@ -1,0 +1,147 @@
+.topbar{
+    width: 100%;
+    height: 80px;
+    background-color: #493F40;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+  
+  .topbarWrapper{
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  
+  .logo{
+    cursor: pointer;
+  }
+  
+  .topTitulo{
+    color: white;
+    margin-left: 10px;
+  
+  }
+  
+  .sair{
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .logout{
+    cursor: pointer;
+  }
+  
+  .logout:hover{
+    cursor: pointer;
+    color: black;
+  }
+  
+  .sidebar {
+  flex: 0;
+      height: calc(100vh - 80px);
+      background-color: #0f1d26;
+      position: sticky;
+      top: 50px;
+    }
+    
+    .sidebarWrapper {
+      padding: 20px;
+      color: white;
+    }
+    
+    .sidebarMenu {
+      margin-bottom: 25px;
+    }
+    
+    .sidebarTitle {
+      font-size: 14px;
+      color: #829893;
+    }
+    
+    .sidebarList {
+      list-style: none;
+      padding: 5px;
+      font-size: 18px;
+    }
+    
+    .sidebarListItem {
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .sidebarListItem.active{
+      background-color: red;
+    }
+  
+    .sidebarListItem:hover {
+      background-color: #829893 !important;
+    }
+    
+    .sidebarIcon{
+        margin-right: 10px;
+        font-size: 25px 
+    }
+  
+  .containerHome{
+      display: flex;
+      margin-top: 0px;
+  }
+  
+  
+  .link{
+      text-decoration: none;
+      color: inherit;
+  }
+  
+  .content{
+      flex: 3;
+      background-color: #220C18;
+  }
+  
+  .dashboardTitulos{
+    color: white;
+  }
+  
+  .imagemEquipa{
+    padding: 5px;
+      max-width:75px;
+      max-height:75px;
+      border-radius: 50%;
+      border: 2px solid #220C18;
+  }
+  
+  .imagemCarousel{
+      padding: 5px;
+      max-width:250px;
+      border-radius: 5px;
+      border: 2px solid #220C18;
+  }
+  
+  .sobre{
+    margin-top: 80px;
+  }
+  
+  .marginFooter{
+    margin-bottom: 80px;
+  }
+  
+  .welcome{
+    color: white;
+    margin-right: 20px;
+  }
+  
+  
+  
+ 
+
+  
+  
+  
