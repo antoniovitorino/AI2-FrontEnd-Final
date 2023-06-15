@@ -21,7 +21,7 @@ function AppContent() {
   useEffect(() => {
     const user = AuthService.getCurrentUser(); 
     if (user) {
-    setcurrentUser({ currentUser: user }); }
+    setcurrentUser(user); }
     }, [location]);
 
     const logOut = () => { 

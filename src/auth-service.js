@@ -6,7 +6,7 @@ class AuthService {
             .post("https://jogatanas-api.onrender.com/users/login", {email, password}) 
             .then(res => {
                 if (res.data.token) {
-                    localStorage.setItem("user", JSON.stringify(res.data));
+                    sessionStorage.setItem("user", JSON.stringify(res.data))
                 }
                 return res.data;
             }, reason => { throw new Error('Utilizador Inválido');
