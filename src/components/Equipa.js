@@ -25,7 +25,7 @@ const Equipas = () => {
       <div className="text-start text-light mb-5"><h1 >Equipa Jogatanas</h1></div>
         <div className="row">
           {equipas.slice(0, 12).map(equipa => (
-          <div className="col-lg-2 col-md-12 mb-5" key={equipa.id}>
+          <div className="col-sm-2 col-md-6 col-lg-12 mb-5" key={equipa.id}>
             <div className="card ">
               <img className="card-img-top" src={`https://jogatanas-api.onrender.com/midia/${equipa.fotoId}`} alt={equipa.nome} />  
               <div className="card-body text-bg-dark">
