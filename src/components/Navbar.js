@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container-fluid px-5">
         <Link className="navbar-brand" to="/">
-          <img src="../assetes/imagem1.png" width="150px" className="d-inline-block align-top" alt="Logo MovieRise" />
+          <img src="../assets/imagem1.png" width="150px" className="d-inline-block align-top" alt="Logo MovieRise" />
         </Link>
         <Link to="/login" className="btn btn-outline-light" tabIndex="1" role="button">
           <LockOpen className="logout" />

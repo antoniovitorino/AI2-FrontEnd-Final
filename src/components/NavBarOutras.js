@@ -7,7 +7,7 @@ function NavBarOutras() {
       <div className="container-fluid my-3 mx-5">
         <div>
         <a className="navbar-brand" href="/">
-          <img src="../assetes/imagem1.png" width="200px" className="d-inline-block align-top" alt="Logo MovieRise" />
+          <img src="../assets/imagem1.png" width="200px" className="d-inline-block align-top" alt="Logo MovieRise" />
         </a>
         </div>
       </div>
