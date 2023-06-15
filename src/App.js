@@ -15,28 +15,29 @@ function App() {
 }
 
 function AppContent() {
-  const [currentUser, setcurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
     const user = AuthService.getCurrentUser(); 
     if (user) {
-    setcurrentUser(user); }
-    }, [location]);
-
-    useEffect(() => {
-      const storedUser = localStorage.getItem("user");
-      if (storedUser) {
-        const user = JSON.parse(storedUser);
-        setCurrentUser(user);
-      }
-    }, []);
-
-    const logOut = () => { 
-      AuthService.logout();
+      setCurrentUser(user);
     }
+  }, [location]);
 
-    return (
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      setCurrentUser(user);
+    }
+  }, []);
+
+  const logOut = () => { 
+    AuthService.logout();
+  }
+
+  return (
     <>
       <Routes>
         <Route path="/" element={<Cliente.Home />} />
