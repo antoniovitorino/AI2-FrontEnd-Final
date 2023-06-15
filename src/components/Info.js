@@ -31,7 +31,7 @@ const Info = () => {
           <div className='row'>
             <div className="col-12 col-md-6 mb-5">    
               <div className="mb-5">{pagina.sobre}</div>
-              <div className="mb-4"><h3>{pagina.info}</h3></div>
+              <div className="mb-4"><h4>{pagina.info}</h4></div>
               <div>
                 <Button style={{
                     borderRadius: 10,

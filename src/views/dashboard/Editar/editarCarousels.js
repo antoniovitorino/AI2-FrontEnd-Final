@@ -100,7 +100,7 @@ export default function EditarCarousels() {
       <div className="row">
         <div className="col-md-6">
           <div className="form-row justify-content-center">
-          <div className='dashboardTitulos'><h2>Editar slide</h2></div>
+          <div className='dashboardTitulos mb-5'><h2>Editar slide</h2></div>
             <div className="form-group mb-4">
               <label htmlFor="inputTitulo" className="visually-hidden">Título</label>
               <input

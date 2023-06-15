@@ -73,7 +73,7 @@ export default function CriarUsers() {
       <div className="row">
         <div className="col-md-6">
           <div className="form-row justify-content-center">
-          <div className='dashboardTitulos'><h2>Criar administradores</h2></div>
+          <div className='dashboardTitulos mb-5'><h2>Criar administradores</h2></div>
             <div className="form-group col-md-12 mb-4">
               <label htmlFor="inputUser" className="visually-hidden">Nome</label>
               <input

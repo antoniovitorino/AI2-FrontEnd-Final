@@ -104,7 +104,7 @@ export default function CriarEquipas() {
       <div className="row">
         <div className="col-md-6">
           <div className="form-row justify-content-center">
-          <div className='dashboardTitulos'><h2>Criar membro da equipa</h2></div>
+          <div className='dashboardTitulos mb-5'><h2>Criar membro da equipa</h2></div>
             <div className="form-group col-md-12 mb-4">
               <label htmlFor="inputNome" className="visually-hidden">Nome</label>
               <input
