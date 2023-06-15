@@ -16,7 +16,7 @@ export default function EditarRegras() {
   const [messageType, setMessageType] = useState(null);
   const [alertType, setAlertType] = useState("");
   const { regraId } = useParams();
-  console.log(regraId);
+ 
 
   useEffect(() => {
     const fetchData = async () => {

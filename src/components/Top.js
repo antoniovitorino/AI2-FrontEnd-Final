@@ -13,7 +13,7 @@ const Top = () => {
     const userObject = AuthService.getCurrentUser(); 
     if (userObject && userObject.token) {
       const user = jwtDecode(userObject.token);
-      console.log(user); 
+      
       setCurrentUser(user);
     }
   }, []);

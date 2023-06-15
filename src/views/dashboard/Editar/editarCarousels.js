@@ -18,8 +18,6 @@ export default function EditarCarousels() {
   const { carouselId } = useParams();
   const [loading, setLoading] = useState(true);
 
-  console.log(carouselId);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
