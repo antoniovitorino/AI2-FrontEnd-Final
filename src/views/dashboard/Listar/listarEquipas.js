@@ -76,7 +76,7 @@ export default function ListarEquipas() {
   return (
     <div className="containerLE m-5">
       <div className="d-flex justify-content-between">
-        <div className='dashboardTitulos mb-3'><h2>Equipas</h2></div>
+      <div className='dashboardTitulos'><h2>Equipas</h2></div>
         <div>
         <Link to="/dashboard/criar-equipas" className="btn btn-light" tabIndex="1" role="button">
           Inserir novo membro
