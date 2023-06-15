@@ -71,10 +71,8 @@ export default function ListarRegras() {
 
   return (
     <div className="containerLR m-5">
-
-<div className='dashboardTitulos mb-3'><h2>Regras</h2></div>
       <div className="d-flex justify-content-between">
-      
+      <div className='dashboardTitulos mb-3'><h2>Regras</h2></div>
         <div>
         <Link to="/dashboard/criar-regras" className="btn btn-light" tabIndex="1" role="button">
           Inserir nova regra

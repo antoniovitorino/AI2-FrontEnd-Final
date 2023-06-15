@@ -74,7 +74,6 @@ export default function ListarUsers() {
 
   return (
     <div className="containerLU m-5">
-      <div className='dashboardTitulos mb-5'><h2>Editar regra</h2></div>
             <div className="d-flex justify-content-between">
         <div className='dashboardTitulos mb-3'><h2>Administradores</h2></div>
         <div>
