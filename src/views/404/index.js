@@ -20,9 +20,9 @@ const NotFoundPage = () => {
           </div>
           <div className="col-md-6 mt-5">
             <p className="fs-3">
-              <span className="text-danger">Opps!</span><span className="dashboardTitulos">Página não encontrada</span>
+              <span className="text-danger">Opps! </span><span className="dashboardTitulos">Página não encontrada</span>
             </p>
-            <p className="lead">A página que procura não existe.</p>
+            <p className="lead dashboardTitulos">A página que procura não existe.</p>
             <Link to="/" className="btn btn-outline-light btn-lg btn-block">
               Início
             </Link>
