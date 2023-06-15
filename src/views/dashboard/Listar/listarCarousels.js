@@ -72,7 +72,7 @@ export default function ListarCarousels(){
     return (
         <div className="containerLE m-5">
               <div className="d-flex justify-content-between">
-        <div className='dashboardTitulos mb-5'><h2>Slides</h2></div>
+        <div className='dashboardTitulos mb-3'><h2>Slides</h2></div>
         <div>
 
         <Link to="/dashboard/criar-carousels" className="btn btn-light" tabIndex="1" role="button">

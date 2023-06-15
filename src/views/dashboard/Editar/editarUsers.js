@@ -94,7 +94,7 @@ export default function EditarUsers() {
   return (
     <div className="containerEU m-5">
       <div className="form-row justify-content-center">
-      <div className='dashboardTitulos mb-5'><h2>Editar administrador</h2></div>
+      <div className='dashboardTitulos mb-3'><h2>Editar administrador</h2></div>
         <div className="form-group col-md-6 mb-4">
           <label htmlFor="inputNome" className="visually-hidden">Nome</label>
           <input

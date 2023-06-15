@@ -100,7 +100,7 @@ export default function EditarCarousels() {
       <div className="row">
         <div className="col-md-6">
           <div className="form-row justify-content-center">
-          <div className='dashboardTitulos mb-5'><h2>Editar slide</h2></div>
+          <div className='dashboardTitulos mb-3'><h2>Editar slide</h2></div>
             <div className="form-group mb-4">
               <label htmlFor="inputTitulo" className="visually-hidden">Título</label>
               <input
@@ -146,7 +146,7 @@ export default function EditarCarousels() {
             </div>
           )}
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 mb-5">
           <div className="form-group">
             <label htmlFor="inputFoto" className="visually-hidden">Foto atual</label>
             {dataCarousel.fotoId && <img src={`${baseUrl}/midia/${dataCarousel.fotoId}`} className="rounded" alt="foto atual" style={{ width: '100%', height: 'auto' }} />}
