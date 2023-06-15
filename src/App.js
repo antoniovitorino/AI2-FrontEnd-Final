@@ -15,7 +15,7 @@ function App() {
 }
 
 function AppContent() {
-  const [currentUser, setcurrentUser] = useState("");
+  const [currentUser, setcurrentUser] = useState(null);
   const location = useLocation();
 
   useEffect(() => {

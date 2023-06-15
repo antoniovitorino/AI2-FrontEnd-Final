@@ -2,7 +2,7 @@ import React from 'react';
 import Top from '../../components/Top';
 import Sidebar from '../../components/Sidebar';
 import { Routes } from "react-router-dom";
-import '../../assets/style.css'
+import './css/style.css'
 
 function Dashboard({ children }) {
   return (

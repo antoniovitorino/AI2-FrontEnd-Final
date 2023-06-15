@@ -1,0 +1,8 @@
+staticSites:
+  - name: jogatanas
+    buildCommand: npm run build
+    publishDir: build
+    routes:
+      - type: rewrite
+        source: '**'
+        destination: '/'
