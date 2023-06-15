@@ -59,6 +59,7 @@ export default function CriarRegras() {
   return (
     <div className="containerCR m-5">
       <div className="form-row justify-content-center">
+      <div className='dashboardTitulos'><h2>Criar regra</h2></div>
         <div className="form-group col-md-6 mb-4">
           <label htmlFor="inputRegra" className="visually-hidden">
             Regra

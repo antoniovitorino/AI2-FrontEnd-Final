@@ -52,6 +52,7 @@ export default function CriarCargos() {
   return (
     <div className="containerCC m-5">
       <div className="form-row justify-content-center">
+      <div className='dashboardTitulos'><h2>Criar Cargo</h2></div>
         <div className="form-group col-md-6 mb-4">
           <label htmlFor="inputCargo" className="visually-hidden">
             Cargo na equipa

@@ -111,6 +111,7 @@ export default function EditarEquipas() {
       <div className="row">
         <div className="col-md-6">
           <div className="form-row justify-content-center">
+          <div className='dashboardTitulos'><h2>Editar membro da equipa</h2></div>
             <div className="form-group mb-4">
               <label htmlFor="inputNome" className="visually-hidden">Nome</label>
               <input
