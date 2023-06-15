@@ -21,6 +21,9 @@ function AppContent() {
 
   useEffect(() => {
     const user = AuthService.getCurrentUser(); 
+
+    console.log("Valor de currentUser:", user);
+
     if (user) {
       setCurrentUser(user);
     }
