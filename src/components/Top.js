@@ -27,7 +27,7 @@ const Top = () => {
     <div className="topbar">
         <div className="topbarWrapper">
             <div className="topleft">
-            <a href="/dashboard/"><img src="../images/imagem1.png" width="100px" className="logo" alt="Logo AfterEnd" /></a>
+            <a href="/dashboard/"><img src="../assetes/imagem1.png" width="100px" className="logo" alt="Logo AfterEnd" /></a>
             <span className="topTitulo">DASHBOARD by jogatanas</span>
             </div>         
             <div className="topright">
