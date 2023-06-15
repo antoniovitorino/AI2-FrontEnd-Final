@@ -103,10 +103,11 @@ export default function EditarPaginas() {
   return (
     <div className="containerEP m-5">
       <div className="row">
+      <div className='dashboardTitulos mb-5'><h2>Editar página</h2></div>
         <div className="col-md-6">
         <form onSubmit={SendUpdate}>
           <div className="form-row justify-content-center">
-          <div className='dashboardTitulos mb-3'><h2>Editar página</h2></div>
+          
             <div className="form-group mb-4">
             
               <label htmlFor="inputPagina" className="visually-hidden">Pagina</label>
