@@ -14,6 +14,7 @@ function App() {
   );
 }
 
+
 function AppContent() {
   const [currentUser, setCurrentUser] = useState(null);
   const location = useLocation();
@@ -35,6 +36,7 @@ function AppContent() {
 
   const logOut = () => { 
     AuthService.logout();
+  
   }
 
   return (
