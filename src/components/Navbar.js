@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link className="navbar-brand" to="/">
           <img src="/imagens/logo.png" width="150px" className="d-inline-block align-top" alt="Logo MovieRise" />
         </Link>
-        <Link to="/" className="btn btn-outline-light" tabIndex="1" role="button">
+        <Link to="/login" className="btn btn-outline-light" tabIndex="1" role="button">
           <LockOpen className="logout" />
         </Link>
       </div>
