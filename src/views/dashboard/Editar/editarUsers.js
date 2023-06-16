@@ -12,7 +12,6 @@ export default function EditarUsers() {
   const [dataUser, setdataUser] = useState("");
   const [campName, setcampName] = useState("");
   const [campEmail, setcampEmail] = useState("");
-  const [campPassword, setcampPassword] = useState("");
   const [message, setMessage] = useState(null);
   const [messageType, setMessageType] = useState(null);
   const [alertType, setAlertType] = useState("");
@@ -29,7 +28,6 @@ export default function EditarUsers() {
           setdataUser(user);
           setcampName(user.name || "");
           setcampEmail(user.email || "");
-          setcampEmail(user.password || "");
         } else {
           setMessage("Error web service");
           setMessageType("danger");
@@ -51,17 +49,12 @@ export default function EditarUsers() {
     setcampEmail(event.target.value);
   }
 
-  function handlePasswordChange(event) {
-    setcampPassword(event.target.value);
-  }
-
   function SendUpdate() {
     const url = `${baseUrl}/update/${userId}`;
 
     const data = {
       name: campName,
       email: campEmail,
-      password: campPassword,
     };
 
     axios.put(url, data, {
@@ -122,17 +115,6 @@ export default function EditarUsers() {
             placeholder="Email"
             value={campEmail}
             onChange={handleEmailChange}
-          />
-        </div>
-
-        <div className="form-group col-md-6 mb-4">
-          <label htmlFor="inputPassword" className="visually-hidden">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Password"
-            value={campPassword}
-            onChange={handlePasswordChange}
           />
         </div>
 
