@@ -72,3 +72,22 @@ const Carousel = () => {
 };
 
 export default Carousel;
+
+
+/*
+O componente Carousel é definido como um componente React.
+Os hooks useState e useEffect são utilizados para gerir o estado e os efeitos colaterais.
+A função shuffle da biblioteca Lodash é importada para embaralhar (random) os dados do carousel.
+O estado carouselData é definido como uma matriz vazia para armazenar os dados do carousel.
+O estado activeIndex é definido como 0 para rastrear o índice do item ativo no carousel.
+O hook useEffect é utilizado para buscar os dados do carousel a partir da API assim que o componente é montado.
+A função fetchCarouselData é definida como uma função assíncrona para fazer a chamada à API e atualizar o estado 
+carouselData com os dados retornados.
+O hook useEffect também é utilizado para criar um intervalo que altera o índice ativo do carousel a cada 5 segundos.
+A função de retorno renderiza o JSX para exibir o carousel com os dados obtidos.
+A propriedade carouselData é mapeada para gerar os itens do carousel.
+A classe active é adicionada ao item cujo índice corresponde ao activeIndex.
+A imagem do item é exibida se item.fotoId estiver definido.
+O título e a descrição do item são exibidos no carousel-caption.
+Os botões de controle anterior e seguinte são renderizados para navegar entre os itens do carousel.
+*/

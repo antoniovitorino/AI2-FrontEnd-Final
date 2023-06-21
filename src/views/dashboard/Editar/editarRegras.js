@@ -130,3 +130,12 @@ export default function EditarRegras() {
     </div>
   );
 }
+
+/*
+Este código implementa o componente EditarRegras, que é responsável por editar as informações de uma regra. Realiza uma 
+solicitação HTTP à API para buscar os dados da regra a ser editada, incluindo o título da regra e a descrição. 
+Os campos de entrada são preenchidos com os dados da regra e o utilizador pode atualizar as informações ao modificar os 
+campos correspondentes. Ao enviar as atualizações, uma solicitação PUT é enviada para a API com os dados atualizados. 
+O servidor responde com uma mensagem indicando se a atualização foi bem-sucedida ou não. O componente também lida com o 
+redirecionamento para a página de listagem de regras após a atualização ser concluída.
+*/

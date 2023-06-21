@@ -43,3 +43,15 @@ const Top = () => {
 };
 
 export default Top;
+
+/*
+O componente Top é definido como uma função React.
+Utiliza o hook useNavigate do React Router para permitir a navegação.
+O estado currentUser é usado para armazenar as informações do utilizador atualmente logado.
+O efeito useEffect é usado para verificar se o utilizador está logado e obter suas informações a partir do token.
+A função handleLogout é chamada quando o botão de logout é clicado. Chama o método logout do serviço de autenticação 
+e redireciona o utilizador para a página de login.
+O retorno do componente é uma estrutura de layout que exibe o logotipo, o título e a saudação ao utilizador logado.
+O botão de logout é renderizado com um ícone de logout e um evento de clique que chama a função handleLogout.
+O componente Top é exportado como o componente padrão.
+*/

@@ -20,6 +20,7 @@ export default function EditarCarousels() {
 
   useEffect(() => {
     const fetchData = async () => {
+      // Função assíncrona para buscar à API os dados do slide a ser editado
       try {
         const carUrl = baseUrl + "/carousels/" + carouselId;
 
@@ -52,6 +53,7 @@ export default function EditarCarousels() {
   };
 
   function SendUpdate() {
+    // Função para enviar os dados atualizados do slide à API
     const url = baseUrl + "/carousels/update/" + carouselId;
     const formData = new FormData();
     formData.append("titulo", campTitulo);
@@ -82,6 +84,7 @@ export default function EditarCarousels() {
   }
 
   useEffect(() => {
+    // useEffect para redirecionar para a página de listar carousels após uma atualização bem-sucedida
     let timeout;
 
     if (alertType === "success") {
@@ -155,3 +158,19 @@ export default function EditarCarousels() {
     </div>
   );
 }
+
+
+/*
+O estado dataCarousel armazena os dados do slide a ser editado, enquanto campTitulo e campDescricao armazenam os 
+valores atualizados dos campos de título e descrição, respetivamente.
+No useEffect inicial, é feita uma chamada assíncrona para buscar à API os dados do slide a partir do seu ID. Se a busca 
+for bem-sucedida, os dados do slide são atualizados nos estados correspondentes.
+A função handleFileChange é responsável por atualizar o estado selectedFile com o arquivo selecionado pelo utilizador 
+para atualização do slide.
+A função SendUpdate é acionada quando o utilizador clica no botão "Atualizar slide". Envia uma requisição PUT para a API, 
+atualizando os dados do slide, incluindo a imagem, se selecionada.
+Outro useEffect é utilizado para redirecionar para a página de listar carousels após uma atualização bem-sucedida. Define 
+um timeout para redirecionar após 2 segundos.
+O componente renderiza um formulário com campos de texto para título e descrição do slide, e um campo de seleção de arquivo 
+para a imagem. Também exibe uma mensagem de sucesso ou erro, dependendo do resultado da atualização.
+*/

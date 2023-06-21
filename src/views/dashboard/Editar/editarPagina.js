@@ -94,7 +94,6 @@ export default function EditarPaginas() {
   function showMessage(success, text) {
     setMessage({ success, text });
   
-    // Apaga a mensagem depois de 2 segundos
     setTimeout(() => {
       setMessage({ success: null, text: "" });
     }, 2000);
@@ -180,3 +179,12 @@ export default function EditarPaginas() {
     </div>
   );
 }
+
+/*
+Este código implementa o componente EditarPaginas, que é responsável por editar as informações da página. Realiza uma 
+solicitação HTTP à API para buscar os dados da página a ser editada, incluindo o nome da página, call to action, informações, 
+vídeo e descrição. Os campos de entrada são preenchidos com os dados da página e o utilizador pode atualizar as informações 
+ao modificar os campos correspondentes. Ao enviar as atualizações, uma solicitação PUT é enviada para a API com os dados atualizados. 
+O servidor responde com uma mensagem indicando se a atualização foi bem-sucedida ou não. O componente também lida com a criação de 
+uma nova página caso ela não exista previamente.
+*/

@@ -123,4 +123,16 @@ export default function CriarUsers() {
   );
 }
 
-//
+/*
+As bibliotecas Bootstrap e Axios são importadas.
+Os hooks useState e useEffect são utilizados para gerir o estado e os efeitos colaterais.
+O componente CriarUsers é definido como um componente React.
+Variáveis de estado são definidas utilizando o hook useState.
+São definidas expressões regulares (regex) para validação de email e password.
+A função SendSave é responsável por verificar os campos preenchidos e fazer a chamada à API para criar um novo administrador.
+São realizadas validações para garantir que todos os campos sejam preenchidos corretamente.
+O envio dos dados é feito utilizando o método POST do Axios e o cabeçalho de autenticação (authHeader()).
+O estado message é atualizado com mensagens de sucesso ou erro retornadas pela API.
+O estado alertType é atualizado com o tipo de alerta correspondente ao sucesso ou erro.
+O estado é limpo e a página é redirecionada para a lista de usuários após um período de tempo especificado, utilizando o hook useEffect.
+*/

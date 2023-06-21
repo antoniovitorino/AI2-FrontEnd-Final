@@ -16,3 +16,10 @@ function NavBarOutras() {
 }
 
 export default NavBarOutras;
+
+/*
+O componente NavBarOutras é definido como uma função React.
+O componente NavBarOutras retorna o conteúdo do navbar para as outras páginas.
+O a com a classe navbar-brand redireciona para a rota inicial ("/") e exibe um logo.
+O componente NavBarOutras é exportado como o componente padrão.
+*/
