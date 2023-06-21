@@ -4,6 +4,7 @@ import { shuffle } from "lodash";
 
 const Carousel = () => {
   const [carouselData, setCarouselData] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const fetchCarouselData = async () => {
@@ -19,12 +20,19 @@ const Carousel = () => {
     fetchCarouselData();
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevActiveIndex) => (prevActiveIndex === carouselData.length - 1 ? 0 : prevActiveIndex + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [carouselData]);
+
   return (
     <div id="carouselExampleFade" className="carousel slide carousel-fade">
       <div className="carousel-inner">
         {carouselData.map((item, index) => (
           <div
-            className={`carousel-item ${index === 0 ? "active" : ""}`}
+            className={`carousel-item ${index === activeIndex ? "active" : ""}`}
             key={item.id}
           >
             {item.fotoId && (
