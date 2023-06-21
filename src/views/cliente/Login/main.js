@@ -35,7 +35,7 @@ export default function LoginComponent() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 text-light">
-            <div className="d-flex align-items-center justify-content-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+            <div className="d-flex align-items-center justify-content-center h-custom-2 px-5 mt-5 pt-5 pt-xl-0 mt-xl-n5">
               <form style={{ width: "20rem" }} onSubmit={handleLogin}>
                 <h3 className="fw-normal mb-5 pb-3">Login</h3>
                 <div className="form-outline mb-4">
