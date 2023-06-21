@@ -1,6 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { shuffle } from 'lodash';
+import { Tilt } from 'react-tilt'
+
+const defaultOptions = {
+reverse: false,
+max: 35,
+perspective: 1000,
+scale: 1.1, 
+speed: 1000,
+transition: true,
+axis: null,
+reset: true,
+easing: "cubic-bezier (.03, .98, 52, .99)",
+}
+
+const customOptions = {
+reverse: true, 
+max: 45, 
+perspective: 1500, 
+scale: 1.2, 
+speed: 2000,
+transition: true, 
+axis: "X", 
+reset: false,
+easing: "cubic-bezier(.2, .8, .3, 1)"
+};
+
+
+
 
 const Equipas = () => {
 
@@ -21,6 +49,7 @@ const Equipas = () => {
   }, []);
 
   return (
+    <Tilt options={defaultOptions}>
     <div className="container-fluid px-5 py-3 sobre marginFooter">
       <div className="text-start text-light mb-5"><h1 >Equipa Jogatanas</h1></div>
         <div className="row">
@@ -39,6 +68,7 @@ const Equipas = () => {
         ))}
       </div>
     </div>
+</Tilt>
   );
 };
 
