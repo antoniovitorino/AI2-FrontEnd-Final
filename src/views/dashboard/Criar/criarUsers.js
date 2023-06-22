@@ -38,7 +38,7 @@ export default function CriarUsers() {
       setMessage("Inserir um email válido!");
       setAlertType("danger");
     } else if (!passwordRegex.test(campPassword)) {
-      setMessage("A senha deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, letras minúsculas e números!");
+      setMessage("A password deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, letras minúsculas e números!");
       setAlertType("danger");
     } else {
       const baseUrl = "https://jogatanas-api.onrender.com/users/register";

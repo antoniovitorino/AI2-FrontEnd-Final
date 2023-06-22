@@ -3,13 +3,13 @@ O estado dataCarousel armazena os dados do slide a ser editado, enquanto campTit
 valores atualizados dos campos de título e descrição, respetivamente.
 No useEffect inicial, é feita uma chamada assíncrona para buscar à API os dados do slide a partir do seu ID. Se a busca 
 for bem-sucedida, os dados do slide são atualizados nos estados correspondentes.
-A função handleFileChange é responsável por atualizar o estado selectedFile com o arquivo selecionado pelo utilizador 
+A função handleFileChange é responsável por atualizar o estado selectedFile com o ficheiro selecionado pelo utilizador 
 para atualização do slide.
 A função SendUpdate é acionada quando o utilizador clica no botão "Atualizar slide". Envia uma requisição PUT para a API, 
 atualizando os dados do slide, incluindo a imagem, se selecionada.
 Outro useEffect é utilizado para redirecionar para a página de listar carousels após uma atualização bem-sucedida. Define 
 um timeout para redirecionar após 2 segundos.
-O componente renderiza um formulário com campos de texto para título e descrição do slide, e um campo de seleção de arquivo 
+O componente renderiza um formulário com campos de texto para título e descrição do slide, e um campo de seleção de ficheiro 
 para a imagem. Também exibe uma mensagem de sucesso ou erro, dependendo do resultado da atualização.
 */
 

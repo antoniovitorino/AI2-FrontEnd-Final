@@ -79,26 +79,23 @@ export default function ListarCarousels() {
 
     // Função SendDelete para enviar a requisição de exclusão do carousel para a API utilizando axios e o cabeçalho de autenticação
     const SendDelete = (carouselId) => {
-        const baseUrl = "https://jogatanas-api.onrender.com/carousels/delete"
-        axios.post(baseUrl, {
-            headers: authHeader(),
-            id: carouselId
-        })
-            .then(response => {
-                if (response.data.success) {
-                    Swal.fire(
-                        'Apagado',
-                        'O registo foi apagado', 'success'
-                    )
-                    LoadCarousel()
-                }
-            })
-            .catch(error => {
-                alert("Error 325 ")
-            });
-    }
-
-
+        const baseUrl = `https://jogatanas-api.onrender.com/carousels/delete/${carouselId}`;
+        axios.delete(baseUrl, { headers: authHeader() })
+          .then(response => {
+            if (response.data.success) {
+              Swal.fire(
+                'Apagado',
+                'O registo foi apagado',
+                'success'
+              );
+              LoadCarousel();
+            }
+          })
+          .catch(error => {
+            alert('Error 325');
+          });
+      };
+      
   // Renderização do componente ListarCarousels, exibindo uma tabela com os slides
     return (
         <div className="containerLE m-5">

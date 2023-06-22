@@ -76,24 +76,23 @@ export default function ListarEquipas() {
 
   // Função SendDelete para enviar a requisição de exclusão da equipa para a API utilizando axios e o cabeçalho de autenticação
   const SendDelete = (userId) => {
-    const baseUrl = "https://jogatanas-api.onrender.com/equipas/delete"
-    axios.post(baseUrl, {
-      headers: authHeader(),
-      id: userId
-    })
+    const baseUrl = `https://jogatanas-api.onrender.com/equipas/delete/${userId}`;
+    axios.delete(baseUrl, { headers: authHeader() })
       .then(response => {
         if (response.data.success) {
           Swal.fire(
             'Apagado',
-            'O registo foi apagado', 'success'
-          )
-          LoadEquipa()
+            'O registo foi apagado',
+            'success'
+          );
+          LoadEquipa();
         }
       })
       .catch(error => {
-        alert("Error 325 ")
-      })
-  }
+        alert('Error 325');
+      });
+  };
+  
 
 
   // Renderização do componente ListarEquipas, exibindo uma tabela com as equipas

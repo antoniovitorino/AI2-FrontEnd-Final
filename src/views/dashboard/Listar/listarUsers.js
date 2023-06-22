@@ -62,26 +62,21 @@ export default function ListarUsers() {
       cancelButtonText: 'Não, manter'
     }).then((result) => {
       if (result.value) {
-        SendDelete(userId)
+        SendDelete(userId);
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire(
-          'Cancelado',
-          'O seu registo está seguro :)', 'error'
-        )
+        Swal.fire('Cancelado', 'O seu registo está seguro :)', 'error');
       }
-    })
-  }
+    });
+  };
+  
 
   // Função SendDelete para enviar a requisição de exclusão do administrador para a API utilizando axios e o token de autenticação
   const SendDelete = (userId) => {
-    const url = baseUrl + "/delete";
-    axios.post(url, { id: userId }, { headers: authHeader() })
+    const url = `${baseUrl}/delete/${userId}`;
+    axios.delete(url, { headers: authHeader() })
       .then(response => {
         if (response.data.success) {
-          Swal.fire(
-            'Apagado',
-            'O registo foi apagado', 'success'
-          )
+          Swal.fire('Apagado', 'O registo foi apagado', 'success');
           LoadUser(authHeader());
         } else {
           alert("Error deleting user");
@@ -90,7 +85,8 @@ export default function ListarUsers() {
       .catch(error => {
         alert("Error deleting user: " + error);
       });
-  }
+  };
+  
 
 
   // Renderização da tabela com a lista de administradores

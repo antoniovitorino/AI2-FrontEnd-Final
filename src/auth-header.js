@@ -1,6 +1,6 @@
 /*
 Esta função é útil para adicionar o cabeçalho de autorização nas requisições HTTP. 
-Verifica se existe um objeto "user" armazenado no localStorage e se esse objeto 
+Verifica se existe um objeto "user" armazenado no localStorage e se este objeto 
 possui a propriedade "token". Se ambos os critérios forem "true", a função retorna 
 um objeto contendo o cabeçalho de autorização, utilizando o token no formato "Bearer <token>". 
 Caso contrário, retorna um objeto vazio. Esta função pode ser importada e utilizada

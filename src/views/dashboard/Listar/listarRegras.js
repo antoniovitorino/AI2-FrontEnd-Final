@@ -69,11 +69,9 @@ export default function ListarRegras() {
 
 
   // Função SendDelete para enviar a requisição de exclusão da regra para a API utilizando axios
-  const SendDelete = regraId => {
-    const baseUrl = 'https://jogatanas-api.onrender.com/regras/delete';
-    axios.post(baseUrl, {
-        id: regraId
-      })
+  const SendDelete = (regraId) => {
+    const url = `https://jogatanas-api.onrender.com/regras/delete/${regraId}`;
+    axios.delete(url)
       .then(response => {
         if (response.data.success) {
           Swal.fire('Apagado', 'O registo foi apagado', 'success');
@@ -81,9 +79,10 @@ export default function ListarRegras() {
         }
       })
       .catch(error => {
-        alert('Error 325'); 
+        alert('Error 325');
       });
-  }
+  };
+  
 
   // Renderização do componente ListarRegras, exibindo uma tabela com as regras
   return (

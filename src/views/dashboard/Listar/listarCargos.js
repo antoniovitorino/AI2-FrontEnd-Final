@@ -74,21 +74,23 @@ export default function ListarCargos() {
 
   // Função SendDelete para enviar a requisição de exclusão do cargo para a API utilizando axios
   const SendDelete = cargoId => {
-    const baseUrl = 'https://jogatanas-api.onrender.com/cargos/delete';
-    axios.post(baseUrl, {
-      id: cargoId
-    })
+    const baseUrl = `https://jogatanas-api.onrender.com/cargos/delete/${cargoId}`;
+    axios.delete(baseUrl)
       .then(response => {
         if (response.data.success) {
-
-          Swal.fire('Apagado', 'O registo foi apagado', 'success');
+          Swal.fire(
+            'Apagado',
+            'O registo foi apagado',
+            'success'
+          );
           LoadCargo();
         }
       })
       .catch(error => {
         alert('Error 325');
       });
-  }
+  };
+  
 
 
   // Renderização do componente ListarCargos, exibindo uma tabela com os cargos
