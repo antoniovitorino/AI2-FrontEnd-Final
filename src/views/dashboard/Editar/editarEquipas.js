@@ -122,7 +122,6 @@ export default function EditarEquipas() {
     <div className="containerEE m-5">
       <div className="row">
         <div className="col-md-6">
-          {/* Formulário para editar o membro da equipa */}
           <div className="form-row justify-content-center">   
             <div className="form-group mb-4">
               <label htmlFor="inputNome" className="visually-hidden">Nome</label>
@@ -175,7 +174,6 @@ export default function EditarEquipas() {
                 onChange={event => setselectCargo(event.target.value)}
               >
                 <option defaultValue>Escolher cargo na equipa</option>
-                {/* Renderiza as opções de cargo a partir dos dados obtidos do servidor */}
                 {cargos.map((cargo, index) => (
                   <option key={index} value={cargo.id}>{cargo.cargo}</option>
                 ))}
@@ -198,7 +196,6 @@ export default function EditarEquipas() {
         <div className="col-md-2">
           <div className="form-group">
             <label htmlFor="inputFoto" className="visually-hidden">Foto atual</label>
-            {/* Exibe a foto atual do membro da equipa */}
             {dataEquipa.fotoId && <img src={`https://jogatanas-api.onrender.com/midia/${dataEquipa.fotoId}`} className="rounded" alt="foto atual" style={{ width: '300px', height: 'auto' }} />}
           </div>
         </div>

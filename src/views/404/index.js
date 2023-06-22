@@ -29,9 +29,6 @@ const NotFoundPage = () => {
   return (
     <>
       <Navbar />
-
-      // Renderização do componente Navbar
-
       <div className="d-flex align-items-center justify-content-center vh-100">
         <div className="text-center row">
           <div className="col-md-6">
@@ -48,12 +45,7 @@ const NotFoundPage = () => {
           </div>
         </div>
       </div>
-
-      // Estrutura da página de "Página não encontrada", com uma imagem, título e botão de voltar para o início
-
       <Footer />
-
-      // Renderização do componente Footer
     </>
   );
 };
