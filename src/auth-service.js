@@ -1,3 +1,11 @@
+/*
+Este código define uma classe AuthService que fornece métodos para realizar operações de autenticação, 
+como login, logout e obter o utilizador atual. Utiliza a biblioteca axios para fazer uma requisição HTTP POST 
+para um endpoint de login na API. Se a resposta da API contém um token, o serviço de autenticação armazena-o 
+no localStorage do navegador como "user". O método logout remove esse item do localStorage, enquanto o método 
+getCurrentUser recupera o objeto JSON armazenado no localStorage.
+*/
+
 import axios from "axios";
 
 class AuthService {
@@ -23,11 +31,3 @@ class AuthService {
 }
 
 export default new AuthService(); // Exportar uma instância do AuthService como padrão (export default) para ser utilizada noutros módulos
-
-/*
-Este código define uma classe AuthService que fornece métodos para realizar operações de autenticação, 
-como login, logout e obter o utilizador atual. Utiliza a biblioteca axios para fazer uma requisição HTTP POST 
-para um endpoint de login na API. Se a resposta da API contém um token, o serviço de autenticação armazena-o 
-no localStorage do navegador como "user". O método logout remove esse item do localStorage, enquanto o método 
-getCurrentUser recupera o objeto JSON armazenado no localStorage.
-*/

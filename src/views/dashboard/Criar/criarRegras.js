@@ -1,3 +1,18 @@
+/*
+As bibliotecas Bootstrap e Axios são importadas.
+O hook useState é utilizado para gerir o estado dos campos do formulário, a mensagem e o tipo de alerta.
+A função CriarRegras é definida como um componente React.
+Variáveis de estado são definidas utilizando o hook useState.
+A função SendSave é responsável por enviar os dados do formulário para a API e salvar a regra.
+A URL base para a chamada da API é definida.
+O método POST do Axios é utilizado para enviar os dados para a API.
+O token de autenticação é passado nos cabeçalhos da requisição utilizando o helper authHeader.
+O estado message é atualizado com mensagens de sucesso ou erro retornadas pela API.
+O estado alertType é atualizado com o tipo de alerta correspondente ao sucesso ou erro.
+O estado é limpo e a página é redirecionada para a lista de regras após um período de tempo especificado, utilizando o hook useEffect.
+A mensagem de sucesso ou erro é exibida dependendo do estado dos valores message e alertType.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -100,18 +115,3 @@ export default function CriarRegras() {
     </div>
   );
 }
-
-/*
-As bibliotecas Bootstrap e Axios são importadas.
-O hook useState é utilizado para gerir o estado dos campos do formulário, a mensagem e o tipo de alerta.
-A função CriarRegras é definida como um componente React.
-Variáveis de estado são definidas utilizando o hook useState.
-A função SendSave é responsável por enviar os dados do formulário para a API e salvar a regra.
-A URL base para a chamada da API é definida.
-O método POST do Axios é utilizado para enviar os dados para a API.
-O token de autenticação é passado nos cabeçalhos da requisição utilizando o helper authHeader.
-O estado message é atualizado com mensagens de sucesso ou erro retornadas pela API.
-O estado alertType é atualizado com o tipo de alerta correspondente ao sucesso ou erro.
-O estado é limpo e a página é redirecionada para a lista de regras após um período de tempo especificado, utilizando o hook useEffect.
-A mensagem de sucesso ou erro é exibida dependendo do estado dos valores message e alertType.
-*/

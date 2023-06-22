@@ -1,3 +1,13 @@
+/*
+Este código implementa o componente EditarEquipas, que é responsável por editar as informações de um membro da equipa. 
+Realiza uma solicitação HTTP à API para buscar os dados do membro da equipa a ser editado, incluindo o nome, número do aluno, 
+biografia, cargo e foto. Os campos de entrada são preenchidos com os dados do membro da equipa e o utilizador pode atualizar 
+as informações ao modificar os campos correspondentes. Ao enviar as atualizações, uma solicitação PUT é enviada para a API com 
+os dados atualizados. O servidor responde com uma mensagem indicando se a atualização foi bem-sucedida ou não. Após uma 
+atualização bem-sucedida, o utilizador é redirecionado para a página de listar equipas. 
+O componente também lida com o upload de uma nova foto para o membro da equipa.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -196,13 +206,3 @@ export default function EditarEquipas() {
     </div>
   );
 }
-
-/*
-Este código implementa o componente EditarEquipas, que é responsável por editar as informações de um membro da equipa. 
-Realiza uma solicitação HTTP à API para buscar os dados do membro da equipa a ser editado, incluindo o nome, número do aluno, 
-biografia, cargo e foto. Os campos de entrada são preenchidos com os dados do membro da equipa e o utilizador pode atualizar 
-as informações ao modificar os campos correspondentes. Ao enviar as atualizações, uma solicitação PUT é enviada para a API com 
-os dados atualizados. O servidor responde com uma mensagem indicando se a atualização foi bem-sucedida ou não. Após uma 
-atualização bem-sucedida, o utilizador é redirecionado para a página de listar equipas. 
-O componente também lida com o upload de uma nova foto para o membro da equipa.
-*/

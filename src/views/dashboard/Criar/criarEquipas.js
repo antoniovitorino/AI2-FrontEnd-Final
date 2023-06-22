@@ -1,3 +1,18 @@
+/*
+As bibliotecas Bootstrap e Axios são importadas.
+Os hooks useState e useEffect são utilizados para gerir o estado e os efeitos colaterais.
+A função CriarEquipas é definida como um componente React.
+Variáveis de estado são definidas utilizando o hook useState.
+A função useEffect é utilizada para realizar uma chamada à API e obter os cargos disponíveis.
+A função handleFileChange é responsável por atualizar o ficheiro selecionado e exibir uma pré-visualização.
+A função previewFile é responsável por ler o ficheiro selecionado e atualizar o estado previewSource com o resultado da leitura.
+A função SendSave é responsável por enviar os dados para a API e salvar o membro da equipa.
+Validações são feitas para verificar se os campos obrigatórios foram preenchidos.
+A função navigate é utilizada para redirecionar o usuário após o sucesso da operação.
+O retorno do componente é a estrutura HTML que representa o formulário de criação de um membro da equipa, incluindo os campos de 
+entrada, o botão de envio e a exibição de mensagens de sucesso ou erro.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -181,18 +196,3 @@ export default function CriarEquipas() {
     </div>
   );
 }
-
-/*
-As bibliotecas Bootstrap e Axios são importadas.
-Os hooks useState e useEffect são utilizados para gerir o estado e os efeitos colaterais.
-A função CriarEquipas é definida como um componente React.
-Variáveis de estado são definidas utilizando o hook useState.
-A função useEffect é utilizada para realizar uma chamada à API e obter os cargos disponíveis.
-A função handleFileChange é responsável por atualizar o ficheiro selecionado e exibir uma pré-visualização.
-A função previewFile é responsável por ler o ficheiro selecionado e atualizar o estado previewSource com o resultado da leitura.
-A função SendSave é responsável por enviar os dados para a API e salvar o membro da equipa.
-Validações são feitas para verificar se os campos obrigatórios foram preenchidos.
-A função navigate é utilizada para redirecionar o usuário após o sucesso da operação.
-O retorno do componente é a estrutura HTML que representa o formulário de criação de um membro da equipa, incluindo os campos de 
-entrada, o botão de envio e a exibição de mensagens de sucesso ou erro.
-*/

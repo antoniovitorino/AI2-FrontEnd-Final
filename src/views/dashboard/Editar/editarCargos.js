@@ -1,3 +1,15 @@
+/*
+O estado dataCargo armazena os dados do cargo a ser editado, enquanto campCargo armazena o valor atualizado do campo de cargo.
+No useEffect inicial, é feita uma chamada assíncrona para buscar à API os dados do cargo a partir do seu ID. Se a busca for 
+bem sucedida, os dados do cargo são atualizados nos estados dataCargo e campCargo.
+A função SendUpdate é acionada quando o utilizador clica no botão "Atualizar cargo na equipa". Envia uma requisição PUT para 
+a API, atualizando o cargo com os dados fornecidos.
+Outro useEffect é utilizado para redirecionar para a página de listar cargos após uma atualização bem-sucedida. Define um timeout 
+para redirecionar após 2 segundos.
+O componente renderiza um formulário com um campo de texto para o cargo e um botão de atualização. Também exibe uma mensagem de 
+sucesso ou erro, dependendo do resultado da atualização.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -112,16 +124,3 @@ export default function EditarCargos() {
     </div>
   );
 }
-
-
-/*
-O estado dataCargo armazena os dados do cargo a ser editado, enquanto campCargo armazena o valor atualizado do campo de cargo.
-No useEffect inicial, é feita uma chamada assíncrona para buscar à API os dados do cargo a partir do seu ID. Se a busca for 
-bem sucedida, os dados do cargo são atualizados nos estados dataCargo e campCargo.
-A função SendUpdate é acionada quando o utilizador clica no botão "Atualizar cargo na equipa". Envia uma requisição PUT para 
-a API, atualizando o cargo com os dados fornecidos.
-Outro useEffect é utilizado para redirecionar para a página de listar cargos após uma atualização bem-sucedida. Define um timeout 
-para redirecionar após 2 segundos.
-O componente renderiza um formulário com um campo de texto para o cargo e um botão de atualização. Também exibe uma mensagem de 
-sucesso ou erro, dependendo do resultado da atualização.
-*/

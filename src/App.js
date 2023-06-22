@@ -1,3 +1,12 @@
+/*
+Este código define uma aplicação React que usa o React Router para lidar com as rotas. 
+O componente App envolve todo a aplicação com o React Router e o componente AppContent 
+define as rotas e o conteúdo da aplicação. Utiliza o estado local (useState) para 
+armazenar o utilizador atual e os hooks useEffect para buscar e atualizar o utilizador com 
+base no AuthService e no localStorage. O componente AppContent também define as rotas e 
+associa cada rota a um componente específico a ser renderizado com base na URL.
+*/
+
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -63,12 +72,3 @@ function AppContent() {
 
 // Exporta o componente App como padrão (default) para ser utilizado em outros módulos
 export default App;
-
-/*
-Este código define uma aplicação React que usa o React Router para lidar com as rotas. 
-O componente App envolve todo a aplicação com o React Router e o componente AppContent 
-define as rotas e o conteúdo da aplicação. Utiliza o estado local (useState) para 
-armazenar o utilizador atual e os hooks useEffect para buscar e atualizar o utilizador com 
-base no AuthService e no localStorage. O componente AppContent também define as rotas e 
-associa cada rota a um componente específico a ser renderizado com base na URL.
-*/

@@ -1,3 +1,22 @@
+/*
+O componente ListarCarousels renderiza uma tabela que exibe a lista de carousels (slides). 
+Utiliza o estado local (useState) para armazenar os dados dos carousels obtidos da 
+API através da função LoadCarousel, que é executada no momento da montagem do componente 
+(hook useEffect). O componente também usa a biblioteca SweetAlert2 para exibir um alerta de 
+confirmação antes de apagar um carousel.
+
+A tabela é exibida com os dados dos carousels e cada linha da tabela possui botões "Editar" 
+e "Apagar". O botão "Editar" redireciona para a página de edição do carousel correspondente, 
+enquanto o botão "Apagar" exibe um alerta de confirmação e, se confirmado, envia uma requisição 
+para apagar o carousel da API. A função LoadFillData é responsável por preencher os dados na 
+tabela, mapeando o array de carousels e gerando as linhas correspondentes.
+
+Além disso, o componente possui um link (botão) para a página de criação de um novo carousel e exibe 
+uma mensagem caso não haja carousels encontrados na lista. O componente utiliza a 
+função authHeader para incluir o cabeçalho de autenticação nas requisições feitas pela função 
+SendDelete.
+*/
+
 // Importações necessárias, incluindo bibliotecas, estilos, componentes e outras dependências
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -134,23 +153,3 @@ export default function ListarCarousels() {
         });
     }
 }
-
-
-/*
-O componente ListarCarousels renderiza uma tabela que exibe a lista de carousels (slides). 
-Utiliza o estado local (useState) para armazenar os dados dos carousels obtidos da 
-API através da função LoadCarousel, que é executada no momento da montagem do componente 
-(hook useEffect). O componente também usa a biblioteca SweetAlert2 para exibir um alerta de 
-confirmação antes de apagar um carousel.
-
-A tabela é exibida com os dados dos carousels e cada linha da tabela possui botões "Editar" 
-e "Apagar". O botão "Editar" redireciona para a página de edição do carousel correspondente, 
-enquanto o botão "Apagar" exibe um alerta de confirmação e, se confirmado, envia uma requisição 
-para apagar o carousel da API. A função LoadFillData é responsável por preencher os dados na 
-tabela, mapeando o array de carousels e gerando as linhas correspondentes.
-
-Além disso, o componente possui um link (botão) para a página de criação de um novo carousel e exibe 
-uma mensagem caso não haja carousels encontrados na lista. O componente utiliza a 
-função authHeader para incluir o cabeçalho de autenticação nas requisições feitas pela função 
-SendDelete.
-*/

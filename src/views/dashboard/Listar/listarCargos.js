@@ -1,3 +1,18 @@
+/*
+O componente ListarCargos renderiza uma tabela que exibe a lista de cargos. Utiliza o estado local (useState) 
+para armazenar os dados dos cargos obtidos da API através da função LoadCargo, que é executada no momento da 
+montagem do componente (hook useEffect). O componente também usa a biblioteca SweetAlert2 para exibir um alerta de 
+confirmação antes de apagar um cargo.
+
+A tabela é exibida com os dados dos cargos e cada linha da tabela possui botões "Editar" e "Apagar". 
+O botão "Editar" redireciona para a página de edição do cargo correspondente, enquanto o botão "Apagar" 
+exibe um alerta de confirmação e, se confirmado, envia uma requisição para apagar o cargo da API. 
+A função LoadFillData é responsável por preencher os dados na tabela, mapeando o array de cargos e gerando as 
+linhas correspondentes.
+O componente possui um link (botão) para a página de criação de um novo cargo e exibe uma mensagem caso não haja 
+cargos encontrados na lista.
+*/
+
 // Importações necessárias, incluindo bibliotecas, estilos, componentes e outras dependências
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -126,19 +141,3 @@ export default function ListarCargos() {
     });
   }
 }
-
-
-/*
-O componente ListarCargos renderiza uma tabela que exibe a lista de cargos. Utiliza o estado local (useState) 
-para armazenar os dados dos cargos obtidos da API através da função LoadCargo, que é executada no momento da 
-montagem do componente (hook useEffect). O componente também usa a biblioteca SweetAlert2 para exibir um alerta de 
-confirmação antes de apagar um cargo.
-
-A tabela é exibida com os dados dos cargos e cada linha da tabela possui botões "Editar" e "Apagar". 
-O botão "Editar" redireciona para a página de edição do cargo correspondente, enquanto o botão "Apagar" 
-exibe um alerta de confirmação e, se confirmado, envia uma requisição para apagar o cargo da API. 
-A função LoadFillData é responsável por preencher os dados na tabela, mapeando o array de cargos e gerando as 
-linhas correspondentes.
-O componente possui um link (botão) para a página de criação de um novo cargo e exibe uma mensagem caso não haja 
-cargos encontrados na lista.
-*/

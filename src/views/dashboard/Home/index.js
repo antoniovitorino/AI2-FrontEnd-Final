@@ -1,3 +1,26 @@
+/*
+Este código é um componente React chamado Home que representa a página inicial da aplicação. 
+O componente é importado e usado noutros lugares do código. O objetivo principal desta página 
+inicial é exibir um dashboard com várias rotas para listar, criar e editar utilizadores, equipas, 
+cargos, regras, carousels e páginas.
+O componente faz uso de vários hooks do React, como useEffect e useState. O useEffect é utilizado 
+para executar efeitos colaterais em determinados momentos, como quando o componente é montado e 
+quando o título da página é alterado. O useState é usado para criar um estado local que armazena 
+o utilizador atual.
+Dentro do useEffect, o componente verifica se existe um utilizador atual. Se não houver, o utilizador 
+é redirecionado para a página de login por meio do hook useNavigate. Caso contrário, o utilizador 
+atual é definido no estado do componente.
+A função setCurrentUser é chamada com o utilizador atual retornado pelo serviço de autenticação 
+AuthService.getCurrentUser(). O serviço AuthService lida com a autenticação e autorização 
+na aplicação.
+O componente retorna um elemento <Dashboard> que envolve várias rotas. Cada rota é definida com a 
+sintaxe <Route path="/caminho" element={<Componente />} />. Cada rota possui um caminho de URL e um 
+componente que será renderizado quando o caminho corresponder à rota atual.
+Por exemplo, a rota <Route path="/listar-users" element={<ListarUsers />} /> renderizará o componente 
+ListarUsers quando o caminho da URL corresponder a "/listar-users". Isto repete-se para todas as outras 
+rotas definidas no código.
+*/
+
 // Importações
 import React, { useEffect, useState } from 'react';
 import { Route } from "react-router-dom";
@@ -65,27 +88,3 @@ function Home() {
 }
 
 export { Home };
-
-
-/*
-Este código é um componente React chamado Home que representa a página inicial da aplicação. 
-O componente é importado e usado noutros lugares do código. O objetivo principal desta página 
-inicial é exibir um dashboard com várias rotas para listar, criar e editar utilizadores, equipas, 
-cargos, regras, carousels e páginas.
-O componente faz uso de vários hooks do React, como useEffect e useState. O useEffect é utilizado 
-para executar efeitos colaterais em determinados momentos, como quando o componente é montado e 
-quando o título da página é alterado. O useState é usado para criar um estado local que armazena 
-o utilizador atual.
-Dentro do useEffect, o componente verifica se existe um utilizador atual. Se não houver, o utilizador 
-é redirecionado para a página de login por meio do hook useNavigate. Caso contrário, o utilizador 
-atual é definido no estado do componente.
-A função setCurrentUser é chamada com o utilizador atual retornado pelo serviço de autenticação 
-AuthService.getCurrentUser(). O serviço AuthService lida com a autenticação e autorização 
-na aplicação.
-O componente retorna um elemento <Dashboard> que envolve várias rotas. Cada rota é definida com a 
-sintaxe <Route path="/caminho" element={<Componente />} />. Cada rota possui um caminho de URL e um 
-componente que será renderizado quando o caminho corresponder à rota atual.
-Por exemplo, a rota <Route path="/listar-users" element={<ListarUsers />} /> renderizará o componente 
-ListarUsers quando o caminho da URL corresponder a "/listar-users". Isto repete-se para todas as outras 
-rotas definidas no código.
-*/

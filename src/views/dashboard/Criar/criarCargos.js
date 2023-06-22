@@ -1,3 +1,16 @@
+/*
+Este código implementa o componente CriarCargos, responsável por criar um novo cargo na equipa.
+O hook useState é utilizado para criar estados para campCargo, message e alertType.
+O hook useEffect é utilizado para definir o comportamento após a renderização do componente.
+O hook useNavigate é utilizado para obter a função de navegação para redirecionar após a criação do cargo.
+A função SendSave é chamada quando o botão "Gravar novo cargo na equipa" é clicado. Realiza uma solicitação 
+POST para o endpoint de criação de cargos, enviando o valor de campCargo como dados da requisição.
+A resposta da solicitação é verificada para determinar se o cargo foi criado com sucesso ou não. Se for bem-sucedido, 
+uma mensagem de sucesso é exibida e o redirecionamento para a página de listagem de cargos é agendado após 2 segundos.
+Caso ocorra um erro na solicitação, uma mensagem de erro é exibida.
+O hook useEffect é utilizado novamente para limpar a mensagem de sucesso e o tipo de alerta após o redirecionamento.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -81,16 +94,3 @@ export default function CriarCargos() {
     </div>
   );
 }
-
-/*
-Este código implementa o componente CriarCargos, responsável por criar um novo cargo na equipa.
-O hook useState é utilizado para criar estados para campCargo, message e alertType.
-O hook useEffect é utilizado para definir o comportamento após a renderização do componente.
-O hook useNavigate é utilizado para obter a função de navegação para redirecionar após a criação do cargo.
-A função SendSave é chamada quando o botão "Gravar novo cargo na equipa" é clicado. Realiza uma solicitação 
-POST para o endpoint de criação de cargos, enviando o valor de campCargo como dados da requisição.
-A resposta da solicitação é verificada para determinar se o cargo foi criado com sucesso ou não. Se for bem-sucedido, 
-uma mensagem de sucesso é exibida e o redirecionamento para a página de listagem de cargos é agendado após 2 segundos.
-Caso ocorra um erro na solicitação, uma mensagem de erro é exibida.
-O hook useEffect é utilizado novamente para limpar a mensagem de sucesso e o tipo de alerta após o redirecionamento.
-*/

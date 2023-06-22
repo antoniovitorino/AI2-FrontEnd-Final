@@ -1,3 +1,16 @@
+/*
+O componente Sidebar é definido como uma função React.
+Utiliza o hook useLocation do React Router para obter a localização atual da página.
+A função isActive é usada para verificar se um determinado caminho está ativo com base na localização atual.
+O retorno do componente é uma estrutura de layout de barra lateral.
+Existem dois menus: "Página" e "Administradores".
+No menu "Página", são renderizados os links para diferentes páginas do dashboard: "Página", "Carousel", "Regras", "Cargos" e "Equipas".
+Cada link é envolvido num componente Link do React Router para permitir a navegação.
+O estilo de fundo do link é definido com base na função isActive, que verifica se o caminho está ativo.
+No menu "Administradores", é renderizado o link para a página de listagem de utilizadores com privilégios de administrador.
+O componente Sidebar é exportado como o componente padrão.
+*/
+
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "../assets/style.css";
@@ -86,17 +99,3 @@ export default function Sidebar() {
         </div>
     );
 }
-
-
-/*
-O componente Sidebar é definido como uma função React.
-Utiliza o hook useLocation do React Router para obter a localização atual da página.
-A função isActive é usada para verificar se um determinado caminho está ativo com base na localização atual.
-O retorno do componente é uma estrutura de layout de barra lateral.
-Existem dois menus: "Página" e "Administradores".
-No menu "Página", são renderizados os links para diferentes páginas do dashboard: "Página", "Carousel", "Regras", "Cargos" e "Equipas".
-Cada link é envolvido num componente Link do React Router para permitir a navegação.
-O estilo de fundo do link é definido com base na função isActive, que verifica se o caminho está ativo.
-No menu "Administradores", é renderizado o link para a página de listagem de utilizadores com privilégios de administrador.
-O componente Sidebar é exportado como o componente padrão.
-*/

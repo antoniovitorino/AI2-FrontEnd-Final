@@ -1,3 +1,12 @@
+/*
+Este código importa uma série de componentes que representam as diferentes páginas e 
+funcionalidades do dashboard. Estes componentes são agrupados num objeto chamado 
+"Dashboard", onde cada propriedade do objeto corresponde a um componente importado. 
+O objeto "Dashboard" é exportado como padrão para que possa ser utilizado noutros módulos 
+do código. Isto permite o uso destes componentes específicos ao navegar e renderizar diferentes 
+partes do dashboard.
+*/
+
 // Importações de diferentes componentes que representam páginas ou funcionalidades específicas do dashboard
 import { Home } from "./Home/index";
 import CriarCargos from "./Criar/criarCargos";
@@ -38,13 +47,3 @@ const Dashboard = {
 
 // Exporta o objeto Dashboard como padrão (default) para ser utilizado noutros módulos
 export default Dashboard;
-
-
-/*
-Este código importa uma série de componentes que representam as diferentes páginas e 
-funcionalidades do dashboard. Estes componentes são agrupados num objeto chamado 
-"Dashboard", onde cada propriedade do objeto corresponde a um componente importado. 
-O objeto "Dashboard" é exportado como padrão para que possa ser utilizado noutros módulos 
-do código. Isto permite o uso destes componentes específicos ao navegar e renderizar diferentes 
-partes do dashboard.
-*/

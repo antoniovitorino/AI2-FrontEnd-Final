@@ -1,3 +1,9 @@
+/*
+Este código importa as bibliotecas React e ReactDOM, cria um elemento "root" para renderização e, 
+de seguida, renderiza o componente "App" nesse "root". O "StrictMode" é uma ferramenta do React 
+que ajuda a identificar potenciais problemas no código.
+*/
+
 // Importar as bibliotecas necessárias: React e ReactDOM
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -14,9 +20,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-/*
-Este código importa as bibliotecas React e ReactDOM, cria um elemento "root" para renderização e, 
-de seguida, renderiza o componente "App" nesse "root". O "StrictMode" é uma ferramenta do React 
-que ajuda a identificar potenciais problemas no código.
-*/

@@ -1,3 +1,9 @@
+/*
+O componente Main renderiza uma seção (<section>), que define a altura da secção como 100% da viewport e o fundo como escuro. 
+Dentro desta secção, há uma estrutura de container-fluid para criar um layout responsivo.
+O componente Main é exportado como padrão, permitindo que seja importado e utilizado noutros lugares da aplicação.
+*/
+
 // Importação dos módulos e componentes necessários
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -48,11 +54,6 @@ export default function LoginComponent() {
   );
 }
 
-/*
-O componente Main renderiza uma seção (<section>), que define a altura da secção como 100% da viewport e o fundo como escuro. 
-Dentro desta secção, há uma estrutura de container-fluid para criar um layout responsivo.
-O componente Main é exportado como padrão, permitindo que seja importado e utilizado noutros lugares da aplicação.
-*/
 
 
 

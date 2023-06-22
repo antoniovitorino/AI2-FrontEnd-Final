@@ -1,3 +1,14 @@
+/*
+Este código implementa o componente EditarUsers, que é responsável por editar as informações de um utilizador administrador. 
+Busca os dados do administrador a ser editado por meio de uma solicitação HTTP GET para o endpoint correspondente. 
+Os campos de entrada são preenchidos com os dados do administrador e pode atualizar as informações ao modificar 
+os campos correspondentes. Ao enviar as atualizações, uma solicitação PUT é enviada para a API com os dados atualizados e um 
+cabeçalho de autenticação contendo o token de autenticação. O servidor responde com uma mensagem indicando se a atualização 
+foi bem-sucedida ou não. O componente também lida com o redirecionamento para a página de listagem de administradores após a 
+atualização ser concluída. O cabeçalho de autenticação é obtido por meio da função authHeader() para adicionar o token de 
+autenticação aos cabeçalhos das solicitações.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -131,15 +142,3 @@ export default function EditarUsers() {
     </div>
   );
 }
-
-
-/*
-Este código implementa o componente EditarUsers, que é responsável por editar as informações de um utilizador administrador. 
-Busca os dados do administrador a ser editado por meio de uma solicitação HTTP GET para o endpoint correspondente. 
-Os campos de entrada são preenchidos com os dados do administrador e pode atualizar as informações ao modificar 
-os campos correspondentes. Ao enviar as atualizações, uma solicitação PUT é enviada para a API com os dados atualizados e um 
-cabeçalho de autenticação contendo o token de autenticação. O servidor responde com uma mensagem indicando se a atualização 
-foi bem-sucedida ou não. O componente também lida com o redirecionamento para a página de listagem de administradores após a 
-atualização ser concluída. O cabeçalho de autenticação é obtido por meio da função authHeader() para adicionar o token de 
-autenticação aos cabeçalhos das solicitações.
-*/

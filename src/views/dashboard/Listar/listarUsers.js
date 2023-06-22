@@ -1,3 +1,18 @@
+/*
+O componente "ListarUsers" é responsável por exibir uma tabela com a lista de administradores. Usa o estado local (useState) 
+para armazenar os dados dos administradores obtidos da API através da função "LoadUser", que é executada no momento da 
+montagem do componente (hook useEffect). O componente também utiliza a biblioteca SweetAlert2 para exibir um alerta de 
+confirmação antes de apagar um administrador.
+
+A tabela é renderizada com os dados dos administradores e cada linha possui botões "Editar" e "Apagar". O botão "Editar" 
+redireciona para a página de edição do administrador correspondente, enquanto o botão "Apagar" exibe um alerta de confirmação e, 
+se confirmado, envia uma requisição para excluir o administrador da API. A função "LoadFillData" é responsável por preencher os 
+dados na tabela, mapeando o array de administradores e gerando as linhas correspondentes.
+
+O componente possui um link para a página de criação de um novo administrador e exibe uma mensagem adequada caso não haja 
+administradores encontrados na lista.
+*/
+
 // Importações necessárias, incluindo bibliotecas, estilos, componentes e outras dependências
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -130,18 +145,3 @@ export default function ListarUsers() {
     });
   }
 }
-
-/*
-O componente "ListarUsers" é responsável por exibir uma tabela com a lista de administradores. Usa o estado local (useState) 
-para armazenar os dados dos administradores obtidos da API através da função "LoadUser", que é executada no momento da 
-montagem do componente (hook useEffect). O componente também utiliza a biblioteca SweetAlert2 para exibir um alerta de 
-confirmação antes de apagar um administrador.
-
-A tabela é renderizada com os dados dos administradores e cada linha possui botões "Editar" e "Apagar". O botão "Editar" 
-redireciona para a página de edição do administrador correspondente, enquanto o botão "Apagar" exibe um alerta de confirmação e, 
-se confirmado, envia uma requisição para excluir o administrador da API. A função "LoadFillData" é responsável por preencher os 
-dados na tabela, mapeando o array de administradores e gerando as linhas correspondentes.
-
-O componente possui um link para a página de criação de um novo administrador e exibe uma mensagem adequada caso não haja 
-administradores encontrados na lista.
-*/

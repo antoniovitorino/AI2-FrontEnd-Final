@@ -1,3 +1,12 @@
+/*
+O componente RegrasComponent é definido como uma função React.
+Utiliza o useState para armazenar os dados das regras do jogo.
+O useEffect é utilizado para fazer uma requisição assíncrona e obter os dados das regras da API.
+Os dados das regras são armazenados no estado regrasData usando o setRegrasData.
+Dentro de cada coluna, é renderizado um card que contém o título da regra (regra.regra) e a descrição da regra (regra.descricao).
+O componente RegrasComponent é exportado como o componente padrão.
+*/
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -39,13 +48,3 @@ const RegrasComponent = () => {
 };
 
 export default RegrasComponent;
-
-
-/*
-O componente RegrasComponent é definido como uma função React.
-Utiliza o useState para armazenar os dados das regras do jogo.
-O useEffect é utilizado para fazer uma requisição assíncrona e obter os dados das regras da API.
-Os dados das regras são armazenados no estado regrasData usando o setRegrasData.
-Dentro de cada coluna, é renderizado um card que contém o título da regra (regra.regra) e a descrição da regra (regra.descricao).
-O componente RegrasComponent é exportado como o componente padrão.
-*/

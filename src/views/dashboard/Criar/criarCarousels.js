@@ -1,3 +1,19 @@
+/*
+As bibliotecas Bootstrap e Axios são importadas.
+Os hooks useState e useEffect são utilizados para gerir o estado e os efeitos colaterais.
+A função CriarCarousels é definida como um componente React.
+Variáveis de estado são definidas utilizando o hook useState.
+A função useEffect é utilizada para realizar uma chamada à API e obter dados dos carousels.
+A função handleFileChange é responsável por atualizar o ficheiro selecionado e exibir uma pré-visualização.
+A função previewFile é responsável por ler o ficheiro selecionado e atualizar o estado previewSource com o resultado da leitura.
+A função SendSave é responsável por enviar os dados para a API e salvar o slide.
+São realizadas validações para garantir que todos os campos obrigatórios sejam preenchidos.
+O envio dos dados é feito utilizando o método POST do Axios e um objeto FormData.
+O estado message é atualizado com mensagens de sucesso ou erro retornadas pela API.
+O estado alertType é atualizado com o tipo de alerta correspondente ao sucesso ou erro.
+O estado é limpo e a página é redirecionada para a lista de carousels após 2 segundos, utilizando o hook useEffect.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -147,19 +163,3 @@ export default function CriarCarousels() {
     </div>
   );
 }
-
-/*
-As bibliotecas Bootstrap e Axios são importadas.
-Os hooks useState e useEffect são utilizados para gerir o estado e os efeitos colaterais.
-A função CriarCarousels é definida como um componente React.
-Variáveis de estado são definidas utilizando o hook useState.
-A função useEffect é utilizada para realizar uma chamada à API e obter dados dos carousels.
-A função handleFileChange é responsável por atualizar o ficheiro selecionado e exibir uma pré-visualização.
-A função previewFile é responsável por ler o ficheiro selecionado e atualizar o estado previewSource com o resultado da leitura.
-A função SendSave é responsável por enviar os dados para a API e salvar o slide.
-São realizadas validações para garantir que todos os campos obrigatórios sejam preenchidos.
-O envio dos dados é feito utilizando o método POST do Axios e um objeto FormData.
-O estado message é atualizado com mensagens de sucesso ou erro retornadas pela API.
-O estado alertType é atualizado com o tipo de alerta correspondente ao sucesso ou erro.
-O estado é limpo e a página é redirecionada para a lista de carousels após 2 segundos, utilizando o hook useEffect.
-*/
