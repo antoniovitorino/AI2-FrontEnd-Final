@@ -1,3 +1,16 @@
+/*
+O componente Info é definido como um componente React.
+O componente Download é importado do @mui/icons-material para exibir o ícone de download.
+O componente Button é importado do @mui/material para renderizar o botão com estilo do Material-UI.
+O estado paginas é definido usando o hook useState para armazenar os dados da página.
+O hook useEffect é usado para buscar os dados da página da API quando o componente é montado.
+A função fetchPaginas é uma função assíncrona que usa o axios para fazer uma requisição GET para a API e 
+atualizar o estado paginas com os dados recebidos.
+Os dados da página são exibidos usando o método map.
+O vídeo da página é exibido num elemento iframe.
+O componente Info é exportado como o componente padrão.
+*/
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { shuffle } from 'lodash';

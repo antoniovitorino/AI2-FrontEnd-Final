@@ -1,3 +1,19 @@
+/*
+O componente "ListarUsers" é responsável por exibir uma tabela com a lista de administradores. Usa o estado local (useState) 
+para armazenar os dados dos administradores obtidos da API através da função "LoadUser", que é executada no momento da 
+montagem do componente (hook useEffect). O componente também utiliza a biblioteca SweetAlert2 para exibir um alerta de 
+confirmação antes de apagar um administrador.
+
+A tabela é renderizada com os dados dos administradores e cada linha possui botões "Editar" e "Apagar". O botão "Editar" 
+redireciona para a página de edição do administrador correspondente, enquanto o botão "Apagar" exibe um alerta de confirmação e, 
+se confirmado, envia uma requisição para excluir o administrador da API. A função "LoadFillData" é responsável por preencher os 
+dados na tabela, mapeando o array de administradores e gerando as linhas correspondentes.
+
+O componente possui um link para a página de criação de um novo administrador e exibe uma mensagem adequada caso não haja 
+administradores encontrados na lista.
+*/
+
+// Importações necessárias, incluindo bibliotecas, estilos, componentes e outras dependências
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -9,6 +25,7 @@ import authHeader from '../../../auth-header';
 
 const baseUrl = "https://jogatanas-api.onrender.com/users";
 
+// Definição do componente funcional ListarUsers e inicialização do estado e uso do hook useEffect
 export default function ListarUsers() {
   const [dataUser, setdataUser] = useState([]);
 
@@ -16,23 +33,25 @@ export default function ListarUsers() {
     LoadUser(authHeader());
   }, []);
 
+  // Função LoadUser para buscar a lista de administradores a partir da API utilizando axios e o token de autenticação
   function LoadUser(token) {
     axios.get(baseUrl + "/list", { headers: token })
-    .then(res => {
-      if (res.data.success) {
-        const data = res.data.data;
-        console.log(data);  // Add this line to inspect the data.
-        const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
-        setdataUser(sortedData);  // Use sorted data.
-      } else {
-        alert("Error Web Service!");
-      }
-    })
-    .catch(error => {
-      alert(error);
-    });
+      .then(res => {
+        if (res.data.success) {
+          const data = res.data.data;
+          console.log(data);  // Adicione esta linha para inspecionar os dados.
+          const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
+          setdataUser(sortedData);  // Utilize os dados ordenados.
+        } else {
+          alert("Error Web Service!");
+        }
+      })
+      .catch(error => {
+        alert(error);
+      });
   }
 
+  // Função OnDelete para exibir um alerta de confirmação antes de apagar um administrador
   const OnDelete = (userId) => {
     Swal.fire({
       title: 'Tem a certeza?',
@@ -43,25 +62,21 @@ export default function ListarUsers() {
       cancelButtonText: 'Não, manter'
     }).then((result) => {
       if (result.value) {
-        SendDelete(userId)
+        SendDelete(userId);
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire(
-          'Cancelado',
-          'O seu registo está seguro :)', 'error'
-        )
+        Swal.fire('Cancelado', 'O seu registo está seguro :)', 'error');
       }
-    })
-  }
+    });
+  };
+  
 
+  // Função SendDelete para enviar a requisição de exclusão do administrador para a API utilizando axios e o token de autenticação
   const SendDelete = (userId) => {
-    const url = baseUrl + "/delete";
-    axios.post(url, { id: userId }, { headers: authHeader() })
+    const url = `${baseUrl}/delete/${userId}`;
+    axios.delete(url, { headers: authHeader() })
       .then(response => {
         if (response.data.success) {
-          Swal.fire(
-            'Apagado',
-            'O registo foi apagado', 'success'
-          )
+          Swal.fire('Apagado', 'O registo foi apagado', 'success');
           LoadUser(authHeader());
         } else {
           alert("Error deleting user");
@@ -70,17 +85,20 @@ export default function ListarUsers() {
       .catch(error => {
         alert("Error deleting user: " + error);
       });
-  }
+  };
+  
 
+
+  // Renderização da tabela com a lista de administradores
   return (
     <div className="containerLU m-5">
       <div className="d-flex justify-content-between">
-      <div className='dashboardTitulos'><h2>Administradores</h2></div>
+        <div className='dashboardTitulos'><h2>Administradores</h2></div>
         <div>
-      <Link to="/dashboard/criar-users" className="btn btn-light" tabIndex="1" role="button">
-          Criar novo administrador
-        </Link>
-      </div>
+          <Link to="/dashboard/criar-users" className="btn btn-light" tabIndex="1" role="button">
+            Criar novo administrador
+          </Link>
+        </div>
       </div>
       <table className="table table-responsive table-striped table-dark text-bg-secondary my-5">
         <thead className="thead-dark text-bg-dark ">
@@ -105,6 +123,7 @@ export default function ListarUsers() {
     </div>
   );
 
+  // Função LoadFillData para preencher os dados na tabela, mapeando o array de administradores e gerar as linhas correspondentes
   function LoadFillData() {
     return dataUser.map((data, index) => {
       return (
@@ -121,5 +140,4 @@ export default function ListarUsers() {
       )
     });
   }
-
 }

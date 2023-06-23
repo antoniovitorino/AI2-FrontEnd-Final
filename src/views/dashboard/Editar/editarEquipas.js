@@ -1,3 +1,13 @@
+/*
+Este código implementa o componente EditarEquipas, que é responsável por editar as informações de um membro da equipa. 
+Realiza uma solicitação HTTP à API para buscar os dados do membro da equipa a ser editado, incluindo o nome, número do aluno, 
+biografia, cargo e foto. Os campos de entrada são preenchidos com os dados do membro da equipa e o utilizador pode atualizar 
+as informações ao modificar os campos correspondentes. Ao enviar as atualizações, uma solicitação PUT é enviada para a API com 
+os dados atualizados. O servidor responde com uma mensagem indicando se a atualização foi bem-sucedida ou não. Após uma 
+atualização bem-sucedida, o utilizador é redirecionado para a página de listar equipas. 
+O componente também lida com o upload de uma nova foto para o membro da equipa.
+*/
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
@@ -22,6 +32,7 @@ export default function EditarEquipas() {
 
   useEffect(() => {
     const fetchData = async () => {
+      // Função assíncrona para buscar os dados do membro da equipa a ser editado
       try {
         const equipeUrl = baseUrl + "/equipas/" + equipaId;
         const cargosUrl = baseUrl + "/cargos";
@@ -63,6 +74,7 @@ export default function EditarEquipas() {
   };
 
   function SendUpdate() {
+    // Função para enviar os dados atualizados do membro da equipa ao servidor
     const url = baseUrl + "/equipas/update/" + equipaId;
     const formData = new FormData();
     formData.append("nome", campNome);
@@ -109,7 +121,6 @@ export default function EditarEquipas() {
   return (
     <div className="containerEE m-5">
       <div className="row">
-      <div className='dashboardTitulos mb-5'><h2>Editar membro da equipa</h2></div>
         <div className="col-md-6">
           <div className="form-row justify-content-center">   
             <div className="form-group mb-4">
@@ -127,7 +138,7 @@ export default function EditarEquipas() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Numéreo Aluno"
+                placeholder="Número Aluno"
                 value={campNumAluno}
                 onChange={event => setcampNumAluno(event.target.value)}
               />
@@ -185,11 +196,10 @@ export default function EditarEquipas() {
         <div className="col-md-2">
           <div className="form-group">
             <label htmlFor="inputFoto" className="visually-hidden">Foto atual</label>
-                {dataEquipa.fotoId && <img src={`https://jogatanas-api.onrender.com/midia/${dataEquipa.fotoId}`} className="rounded" alt="foto atual" style={{ width: '300px', height: 'auto' }} />}
-              </div>
+            {dataEquipa.fotoId && <img src={`https://jogatanas-api.onrender.com/midia/${dataEquipa.fotoId}`} className="rounded" alt="foto atual" style={{ width: '300px', height: 'auto' }} />}
+          </div>
         </div>
       </div>
     </div>
-
   );
 }

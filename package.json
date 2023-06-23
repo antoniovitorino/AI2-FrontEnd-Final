@@ -25,6 +25,7 @@
     "react-hook-form": "^7.44.3",
     "react-router-dom": "^6.11.2",
     "react-scripts": "^5.0.1",
+    "react-tilt": "^1.0.2",
     "react-validation": "^3.0.7",
     "sweetalert2": "^11.4.8",
     "typeface-poppins": "^1.1.13",

@@ -1,3 +1,14 @@
+/*
+O componente Navbar é definido como um componente React.
+O ícone LockOpen é importado do @mui/icons-material para exibir o ícone.
+O componente Link é importado do react-router-dom para criar links para outras rotas da aplicação.
+O componente Navbar renderiza uma barra de navegação.
+O nav possui a classe navbar.
+O Link com a classe navbar-brand redireciona para a rota inicial ("/") e exibe um logo.
+O Link com a classe btn btn-outline-light redireciona para a rota de login ("/login").
+O componente Navbar é exportado como o componente padrão.
+*/
+
 import React from "react";
 import LockOpen from '@mui/icons-material/LockOpen';
 import { Link } from 'react-router-dom';

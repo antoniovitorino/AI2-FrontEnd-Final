@@ -1,12 +1,30 @@
+/*
+O componente ListarEquipas renderiza uma tabela que exibe a lista de equipas. Utiliza o estado local (useState) 
+para armazenar os dados das equipas obtidos da API através da função LoadEquipa, que é executada no momento da 
+montagem do componente (hook useEffect). O componente também usa a biblioteca SweetAlert2 para exibir um alerta de 
+confirmação antes de apagar uma equipa.
+
+A tabela é exibida com os dados das equipas e cada linha da tabela possui botões "Editar" e "Apagar". O botão 
+"Editar" redireciona para a página de edição da equipa correspondente, enquanto o botão "Apagar" exibe um alerta 
+de confirmação e, se confirmado, envia uma requisição para apagar a equipa da API. A função LoadFillData é responsável
+por preencher os dados na tabela, mapeando o array de equipas e gerando as linhas correspondentes.
+
+O componente possui um link para a página de criação de uma nova equipa e exibe uma mensagem caso não haja equipas 
+encontradas na lista. O componente utiliza a função authHeader para incluir o cabeçalho de autenticação nas 
+requisições feitas pela função SendDelete.
+*/
+
+// Importações necessárias, incluindo bibliotecas, estilos, componentes e outras dependências
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import authHeader from '../../../auth-header';
 
+// Definição do componente funcional ListarEquipas e inicialização do estado e uso do hook useEffect
 export default function ListarEquipas() {
 
   const [dataEquipa, setdataEquipa] = useState([]);
@@ -15,6 +33,7 @@ export default function ListarEquipas() {
     LoadEquipa();
   }, []);
 
+  // Função LoadEquipa para buscar a lista de equipas a partir da API utilizando axios
   function LoadEquipa() {
     const url = "https://jogatanas-api.onrender.com/equipas";
     axios.get(url)
@@ -33,6 +52,7 @@ export default function ListarEquipas() {
       });
   };
 
+  // Função OnDelete para exibir um alerta de confirmação antes de apagar uma equipa
   const OnDelete = (id) => {
     Swal.fire({
       title: 'Tem a certeza?',
@@ -53,34 +73,37 @@ export default function ListarEquipas() {
     })
   }
 
+
+  // Função SendDelete para enviar a requisição de exclusão da equipa para a API utilizando axios e o cabeçalho de autenticação
   const SendDelete = (userId) => {
-    const baseUrl = "https://jogatanas-api.onrender.com/equipas/delete"
-    axios.post(baseUrl, {
-      headers: authHeader(),
-      id: userId
-    })
+    const baseUrl = `https://jogatanas-api.onrender.com/equipas/delete/${userId}`;
+    axios.delete(baseUrl, { headers: authHeader() })
       .then(response => {
         if (response.data.success) {
           Swal.fire(
             'Apagado',
-            'O registo foi apagado', 'success'
-          )
-          LoadEquipa()
+            'O registo foi apagado',
+            'success'
+          );
+          LoadEquipa();
         }
       })
       .catch(error => {
-        alert("Error 325 ")
-      })
-  }
+        alert('Error 325');
+      });
+  };
+  
 
+
+  // Renderização do componente ListarEquipas, exibindo uma tabela com as equipas
   return (
     <div className="containerLE m-5">
       <div className="d-flex justify-content-between">
-      <div className='dashboardTitulos'><h2>Equipas</h2></div>
+        <div className='dashboardTitulos'><h2>Equipas</h2></div>
         <div>
-        <Link to="/dashboard/criar-equipas" className="btn btn-light" tabIndex="1" role="button">
-          Inserir novo membro
-        </Link>
+          <Link to="/dashboard/criar-equipas" className="btn btn-light" tabIndex="1" role="button">
+            Inserir novo membro
+          </Link>
         </div>
       </div>
       <table className="table table-responsive table-striped table-dark text-bg-secondary my-5">
@@ -109,6 +132,7 @@ export default function ListarEquipas() {
     </div>
   );
 
+  // Função LoadFillData para preencher os dados na tabela, mapeando o array de equipas e gerar as linhas correspondentes
   function LoadFillData() {
     return dataEquipa.map((data, index) => {
       return (
