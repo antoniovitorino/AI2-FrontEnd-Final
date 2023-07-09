@@ -15,8 +15,8 @@ const Footer = () => {
 
 <div className="container-fluid px-5 py-3 ">
   <div> 
-          <p><span className="text-light">2023 Jogatanas - Trabalho de: António Vitorino | 21068 & Inês Mateus | 17945  </span></p>
-          <p><span className="text-light">IPV | ESTGV | TDM | AI2 | DJ | Professores: Frederico Fonseca, Nuno Carapito, Steven Abrantes e Tiago Rebelo</span></p>
+          <p><span className="text-light">2023 Jogatanas</span></p>
+          <p><span className="text-light">IPV | ESTGV | TDM | DJ | Professores: Frederico Fonseca e Nuno Carapito</span></p>
           </div>
           <div>
           <Link to="http://193.137.7.33/~estgv20449/Jogos/ProjetoWebGL/WEBGL/" className="btn btn-outline-light" tabIndex="1" role="button">Jogar online</Link>
