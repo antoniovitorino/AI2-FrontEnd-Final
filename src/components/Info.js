@@ -46,6 +46,7 @@ const Info = () => {
               <div className="mb-5">{pagina.sobre}</div>
               <div className="mb-4"><h4>{pagina.info}</h4></div>
               <div>
+              <a href="/downloads/afterend.zip" download>
                 <Button style={{
                     borderRadius: 10,
                     backgroundColor: "#829893",
@@ -54,6 +55,7 @@ const Info = () => {
                     }} variant="contained" endIcon={<Download />}>
                         {pagina.call_action}
                 </Button>
+                </a>
             </div>
             </div>
             <div className="col-12 col-md-6 mb-5" style={{ position: 'relative', minHeight: '500px' }}>
